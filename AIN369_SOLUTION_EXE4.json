@@ -1,0 +1,50 @@
+{
+	"name": "New Gauge",
+	"description": "New Gauge",
+	"eula": "",
+	"vendor": "Infosys",
+	"license": "",
+	"id": "com.infy.sample.gauge.ain369.solutionEXE4",
+	"newInstancePrefix": "Gauge_sol",
+	"version": "1.0.0",
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-infy-teched-gauge-solution-exe4",
+            "url": "https://github.com/vivekkm1989/EX4/blob/master/webcomponent.js",
+			"properties": [
+				"angleMax"
+			],
+            "integrity": "",
+            "ignoreIntegrity" : true
+		}
+		
+    ],
+	"properties": {
+		"angleMax": {
+			"type": "number",
+			"description": "The resting angle of the gauge",
+			"default" : 0
+		}
+	},
+	"methods": {
+		"setAngle": {
+			"description": "Update the gauge angle",
+			"parameters": [
+				{
+					"name": "angleMax",
+					"type": "number",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+            "body": "this.angleMax = angleMax;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Gauge"
+		}
+
+	}
+}
