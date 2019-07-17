@@ -150,9 +150,9 @@ console.log("Inside ready");
       .style("fill", function(d) { return color(populationById[d.id]); })
       .style('stroke', 'white')
       .style('stroke-width', 1.5)
-      .style("opacity",0.8)
+      .style("opacity",0.8);
       // tooltips
-        .style("stroke","white")
+       /* .style("stroke","white")
         .style('stroke-width', 0.3)
         .on('mouseover',function(d){
           tip.show(d);
@@ -163,7 +163,7 @@ console.log("Inside ready");
             .style("stroke-width",3);
         })
         .on('mouseout', function(d){
-          tip.hide(d);
+          tip.hide(d);*/
 
           d3.select(this)
             .style("opacity", 0.8)
