@@ -1,13 +1,19 @@
 (function()  {
     let d3Script = document.createElement('script');
+	let d3Script1 = document.createElement('script');
+	let d3Script2 = document.createElement('script');
    
    // d3Script.src="http://d3js.org/d3.v4.min.js";
-    d3Script.src="https://d3js.org/queue.v1.min.js";
-    d3Script.src="https://d3js.org/topojson.v1.min.js";
+    d3Script1.src="https://d3js.org/queue.v1.min.js";
+    d3Script2.src="https://d3js.org/topojson.v1.min.js";
 	 d3Script.src = 'https://d3js.org/d3.v5.min.js';
  //   d3Script.src="d3-tip.js";
     d3Script.async = false;
+	d3Script1.async = false;
+	d3Script2.async = false;
     document.head.appendChild(d3Script);
+	document.head.appendChild(d3Script1);
+	document.head.appendChild(d3Script2);
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -29,6 +35,8 @@
             // your cleanup code goes here
             try{
                 document.head.removeChild(d3Script);
+		    document.head.removeChild(d3Script1);
+		    document.head.removeChild(d3Script2);
             }
             catch{}
             }
