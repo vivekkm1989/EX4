@@ -1,8 +1,12 @@
 (function()  {
     let d3Script = document.createElement('script');
+	 let d3Script1 = document.createElement('script');
     d3Script.src = 'https://d3js.org/d3.v5.min.js';
+	 d3Script1.src ='https://requirejs.org/docs/release/2.3.5/minified/require.js';
     d3Script.async = false;
+	 d3Script1.async = false;
     document.head.appendChild(d3Script);
+	document.head.appendChild(d3Script1);
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -20,6 +24,7 @@
             // your cleanup code goes here
             try{
                 document.head.removeChild(d3Script);
+		    document.head.removeChild(d3Script1);
             }
             catch{}
             }
