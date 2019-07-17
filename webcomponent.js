@@ -35,8 +35,8 @@
         constructor() {
             super();
             //Constants
-            if (!window._d3){
-                window._d3 = d3;
+           /*              if (!window._d3){
+                window._d3 = d3;*/
             }
             
             this._shadowRoot = this.attachShadow({mode: 'open'});
