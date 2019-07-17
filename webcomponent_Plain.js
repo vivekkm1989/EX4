@@ -84,7 +84,7 @@
 		 if (window._d3){
                 console.log("yes");
             } else console.log("no");
-		window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
+		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
   .then(function(data) {}, function(error) {
     if (error) {
         console.log("inside new");
