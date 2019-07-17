@@ -4,7 +4,7 @@
    // d3Script.src="http://d3js.org/d3.v4.min.js";
     d3Script.src="http://d3js.org/queue.v1.min.js";
     d3Script.src="http://d3js.org/topojson.v1.min.js";
-    d3Script.src="d3-tip.js";
+ //   d3Script.src="d3-tip.js";
     d3Script.async = false;
     document.head.appendChild(d3Script);
 
