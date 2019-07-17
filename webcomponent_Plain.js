@@ -84,7 +84,15 @@
 		 if (window._d3){
                 console.log("yes");
             } else console.log("no");
-		    
+		d3.json("/trip_animate/tripData.geojson")
+  .then(function(data) {}, function(error) {
+    if (error) {
+        console.log("inside new");
+        console.log(error);
+        return;
+    }
+
+		});   
 		
             window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
 		    console.log("inside file load");
