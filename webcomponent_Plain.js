@@ -76,6 +76,7 @@
             var vis=this._svgContainer;
            // var eSvg = require.toUrl('https://vivekkm1989.github.io/Rect/image.svg');
             d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
+		    console.log("inside file load");
                 if (error) {
                     console.log(error);
                     return;
