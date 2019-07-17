@@ -94,6 +94,7 @@
 
         redraw() {
             if (!this._svgContainer){
+		      console.log("inside svg create");
                 this._svgContainer = window._d3.select(this._shadowRoot)
                 .append("svg:svg")
                 .attr("id", "Worldmap")
@@ -102,14 +103,12 @@
             }
 
 
-var svg = window._d3.select(this._shadowRoot)
-            .append("svg")
-            .attr("width", this._widgetWidth)
-            .attr("height", this._widgetWidth);
+var svg = this._svgContainer;
            
 
             var path = d3.geoPath().projection(d3.geoMercator());
             d3.json("https://unpkg.com/world-atlas@1/world/110m.json", function(error, world) {
+		    console.log("inside json");
               if (error) throw error;
               svg.selectAll("path")
                  .data(topojson.feature(world,world.objects.countries).features)
