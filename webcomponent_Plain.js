@@ -1,7 +1,7 @@
 (function()  {
     let d3Script = document.createElement('script');
 	 let d3Script1 = document.createElement('script');
-    d3Script.src = 'https://d3js.org/d3.v4.min.js';
+    d3Script.src = 'https://d3js.org/d3.v5.min.js';
 	 d3Script1.src ='https://requirejs.org/docs/release/2.3.5/minified/require.js';
     d3Script.async = false;
 	 d3Script1.async = false;
