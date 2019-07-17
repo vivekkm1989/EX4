@@ -85,7 +85,10 @@
                 console.log("yes");
             } else console.log("no");
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
-  .then(function(data) {}, function(error) {
+  .then(function(data) {
+		console.log("inside new1");
+		
+		}, function(error) {
     if (error) {
         console.log("inside new");
         console.log(error);
