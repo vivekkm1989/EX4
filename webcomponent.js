@@ -138,7 +138,7 @@ var path = d3.geoPath().projection(projection);
 
 //svg.call(tip);
 
-d3.queue()
+d3_queue.queue()
     .defer(d3.json, "world_countries.json")
     .defer(d3.tsv, "https://vivekkm1989.github.io/Worldmap/Population.tsv")
     .await(ready);
