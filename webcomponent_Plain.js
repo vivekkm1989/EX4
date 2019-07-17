@@ -74,7 +74,11 @@
             }
 
             var vis=this._svgContainer;
-            var eSvg = require.toUrl("https://vivekkm1989.github.io/Rect/image.svg");
+		
+		define(["require"], function(require) {
+   var eSvg = require.toUrl("https://vivekkm1989.github.io/Rect/image.svg");
+});
+           
 		console.log(eSvg);
             window._d3.xml(eSvg, function(error, documentFragment) {
 		    console.log("inside file load");
