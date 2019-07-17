@@ -87,7 +87,24 @@
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
   .then(function(data) {
 		console.log("inside new1");
-		
+		 window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
+		    console.log("inside file load");
+                if (error) {
+                    console.log(error);
+                    return;
+                }
+    
+                var svgNode = documentFragment
+                    .getElementsByTagName("svg")[0];
+                //use plain Javascript to extract the node
+    		console.log(svgNode);
+                vis.node().appendChild(svgNode);
+                var innerSVG = vis.select("svg");
+                //	var innerSVG = vis.html(documentFragment);
+                innerSVG.selectAll("polygon").style("fill", "yellow");
+                window._d3.selectAll("polygon").each(function(d, i) {
+                    arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
+                });
 		}, function(error) {
     if (error) {
         console.log("inside new");
