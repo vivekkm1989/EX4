@@ -163,13 +163,13 @@ console.log("Inside ready");
             .style("stroke-width",3);
         })
         .on('mouseout', function(d){
-          tip.hide(d);*/
+          tip.hide(d);
 
           d3.select(this)
             .style("opacity", 0.8)
             .style("stroke","white")
             .style("stroke-width",0.3);
-        });
+        });*/
 
   svg.append("path")
       .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
