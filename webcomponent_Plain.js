@@ -84,16 +84,11 @@
 		 if (window._d3){
                 console.log("yes");
             } else console.log("no");
+		
+		//new code added
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
   .then(function(data) {
-		console.log("inside new1");
-		 window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
-		    console.log("inside file load");
-                if (error) {
-                    console.log(error);
-                    return;
-                }
-    
+		console.log("inside new1");   
                 var svgNode = documentFragment
                     .getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
