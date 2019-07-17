@@ -87,10 +87,9 @@
 		
 		//new code added
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
-  .then(function(data,documentFragment) {
-		console.log("inside new1");   
-                var svgNode = documentFragment
-                    .getElementsByTagName("svg")[0];
+  .then(function(data) {
+		console.log(data);   
+                var svgNode = data.getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
     		console.log(svgNode);
                 vis.node().appendChild(svgNode);
