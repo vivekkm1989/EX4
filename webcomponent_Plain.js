@@ -96,13 +96,13 @@
                 var svgNode = documentFragment
                     .getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
-    
+    		console.log(svgNode);
                 vis.node().appendChild(svgNode);
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
                 innerSVG.selectAll("polygon").style("fill", "white");
-                d3.selectAll("polygon").each(function(d, i) {
-                    arrsvgelement.push(d3.select(this).attr("id").replace("_", " "));
+                window._d3.selectAll("polygon").each(function(d, i) {
+                    arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
                 });
             });
 
