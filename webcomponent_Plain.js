@@ -94,7 +94,7 @@
              
                 })			 
 		    .on("click",function() {
-                    var id=d3.select(this).attr("title");
+                    var title=d3.select(this).attr("title");
                     if(!title)
                     {
                     segmentname = d3.select(this).attr("id");
