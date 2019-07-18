@@ -17,7 +17,7 @@
 
 
     class WM extends HTMLElement {
-
+	var sgname;
 
         disconnectedCallback () {
             // your cleanup code goes here
@@ -38,15 +38,14 @@
             this._shadowRoot = this.attachShadow({mode: 'open'});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.style.height = "100%";  //Beta Workaround
-            this._svgContainer;    
-     
+            this._svgContainer;   
+		
+     this.redraw();
             //Adding event handler for click events
-		         /*           this.addEventListener("click", event => {
+		                  this.addEventListener("click", event => {
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
-                    });*/
-            
-            this.redraw();
+                    });                      
             
         };
 
@@ -122,11 +121,12 @@
         //Helper function	
            
           //Getters and Setters
-          getSegmentname() {
-            var sgname = d3.select(this).attr("title");
+         getSegmentname() {
+            /* var sgname = d3.select(this).attr("title");
             console.log("incide get");
             console.log(this);
-            console.log(window._d3.select(this).attr("id").value);
+            console.log(window._d3.select(this).attr("id").value);*/
+	     console.log(sgname);
             return sgname;
         }
          set angleMax(value) {
