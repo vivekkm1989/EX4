@@ -96,7 +96,7 @@
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
                     });
-                });
+                })
                 .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
