@@ -104,8 +104,7 @@
                     else 
                     segmentname = d3.select(this).attr("title");
                     console.log(segmentname);
-                    this.fireEvent("onclick");	
-                    this.fireEvent("click");
+                   
                 });
 
 
