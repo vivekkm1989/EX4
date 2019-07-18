@@ -87,8 +87,7 @@
 			//console.log(sgm);
                     console.log("incide each");
                    // this.attachClickListener(this);
-			           this.addEventListener("click", event => {
-					   
+			           this.addEventListener("click", event => {					   
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
                     });
@@ -123,21 +122,11 @@
 
          
         //Helper function	
-        attachClickListener(SvgNode) {
-            
-            SvgNode.forEach(node => node.on("click", () => 
-            {
-           var a= window._d3.select(this).attr("id");
-           console.log(a);
-            }
-        
-        ));
-        }
-    
+           
           //Getters and Setters
           getSegmentname() {
             var sgname = d3.select(this).attr("title");
-            console.log(d3.select(this));
+            console.log("incide get");
             console.log(this);
             console.log(window._d3.select(this).attr("id").value);
             return sgname;
