@@ -80,6 +80,7 @@
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
                 innerSVG.selectAll("polygon").style("fill", "yellow");
+			 console.log("before each");
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
                     //var sgm= window._d3.select(this)
@@ -87,6 +88,7 @@
                     this.attachClickListener(this);
              
                 });
+			 console.log("after each");
 		  /*  .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
