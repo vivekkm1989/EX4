@@ -64,17 +64,18 @@
 		
    
 		 if (window._d3){
-                console.log("yes");
+                
+			 le.log("yes");
             } else console.log("no");
 		
 		//new code added
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
   .then(function(data) {
-        console.log(data);   
+         
         var segmentname;
                 var svgNode = data.getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
-    		console.log(svgNode);
+    		
                 vis.node().appendChild(svgNode);
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
