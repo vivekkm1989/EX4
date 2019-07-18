@@ -51,10 +51,12 @@
         };
 
         //Getters and Setters
-      /*   get angleMax() {
-            return this._endAngleDeg;
+        get segmentname() {
+            var segmentname = d3.select(this).attr("title");
+            console.log(segmentname);
+            return segmentname;
         }
-        set angleMax(value) {
+        /* set angleMax(value) {
             //Empty the shadow dom
             if (this._svgContainer){
                 this._svgContainer._groups[0][0].innerHTML = "";
