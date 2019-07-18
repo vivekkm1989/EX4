@@ -1,0 +1,63 @@
+{
+	"name": "Rect",
+	"description": "World Map Custom Widget",
+	"eula": "",
+	"vendor": "Infosys",
+	"license": "",
+	"id": "com.infy.sample.worldmap.solution",
+	"newInstancePrefix": "Rect_solv1",
+	"version": "1.0.0",
+	"icon": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-infy-wm-sol",
+            "url": "https://vivekkm1989.github.io/Rect/webcomponent_Plain.js",
+			
+            "integrity": "",
+            "ignoreIntegrity" : true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-infy-wm-sol-aps",
+			"url": "https://vivekkm1989.github.io/Rect/aps_webcomponent.js",
+			"integrity": "sha256-fELJGnAe1xBbRVaS35wFhQeMXz9y7ZPWmEsQ01nQK/E=",
+			"ignoreIntegrity": true
+		}
+	
+    ],
+	"properties": {
+		"segmentname": {
+			"type": "string",
+			"description": "SVG segmentname",
+			"default" : "segmentname1"
+		}
+	},
+	
+	"methods": {
+		"setAngle": {
+			"description": "Update the gauge angle",
+			"parameters": [
+				{
+					"name": "angleMax",
+					"type": "number",
+					"description": "The displayed angle of the gauge"
+				}
+			],
+            "body": "this.angleMax = angleMax;"
+		},
+		"getSegmentname": {
+			"returnType": "string",
+			"description": "Returns the segmentname.",
+			"parameters": []
+		
+			
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Gauge"
+		}
+
+	}
+}
