@@ -63,11 +63,6 @@
 
             var vis=this._svgContainer;
 		
-   
-		 if (window._d3){
-                
-			
-            } else console.log("no");
 		
 		//new code added
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
@@ -82,12 +77,11 @@
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
                 innerSVG.selectAll("polygon").style("fill", "yellow");
-			 console.log("before each");
+			
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
                   //  var sgm= window._d3.select(this);
-			//console.log(sgm);
-                    console.log("incide each");
+			
                    // this.attachClickListener(this);
 			           this.addEventListener("click", event => {					   
                         var event = new Event("onClick");
@@ -101,13 +95,12 @@
                     {
 			    sgname=d3.select(this).attr("id");
                     segmentname = d3.select(this).attr("id");
-                    console.log(segmentname);
-			    console.log("inside click");
+                  
                     }
                     else {
 			    sgname=d3.select(this).attr("title");
                     segmentname = d3.select(this).attr("title");
-                    console.log(segmentname);
+                    
 		    }
                    
                 });
