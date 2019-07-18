@@ -92,24 +92,24 @@
                 innerSVG.selectAll("polygon").style("fill", "yellow");
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
-                 /*   this.addEventListener("click", event => {
+                   this.addEventListener("click", event => {
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
-                    });*/
-                })
-                .on("click",function() {
+                    });
+                });
+              /*  .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
                     {
                     segmentname = d3.select(this).attr("id");
-                    console.log(segmentname);
+                    console.log("inside click");
                     }
                     else 
                     segmentname = d3.select(this).attr("title");
                     console.log(segmentname);
                     this.fireEvent("onclick");	
                     this.fireEvent("click");
-                });
+                });*/
 
 
 		}, function(error) {
