@@ -97,7 +97,7 @@
                         this.dispatchEvent(event);
                     });
                 });
-              /*  .on("click",function() {
+                .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
                     {
@@ -109,7 +109,7 @@
                     console.log(segmentname);
                     this.fireEvent("onclick");	
                     this.fireEvent("click");
-                });*/
+                });
 
 
 		}, function(error) {
