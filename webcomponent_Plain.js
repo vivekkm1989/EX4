@@ -56,7 +56,7 @@
             if (!this._svgContainer){
                 this._svgContainer = window._d3.select(this._shadowRoot)
                 .append("svg:svg")
-                .attr("id", "Worldmap")
+                .attr("id", "rect")
                 .attr("width", this._widgetWidth)
                 .attr("height", this._widgetWidth);
             }
