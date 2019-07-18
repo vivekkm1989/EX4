@@ -53,8 +53,9 @@
         //Getters and Setters
         getSegmentname() {
             var sgname = d3.select(this).attr("title");
-            console.log(sgname);
-            console.log("inside get m");
+            console.log(d3.select(this));
+            console.log(this);
+            console.log(window._d3.select(this).attr("id").value);
             return sgname;
         }
          set angleMax(value) {
