@@ -52,10 +52,10 @@
 
         //Getters and Setters
         get segmentname() {
-            var segmentname = d3.select(this).attr("title");
-            console.log(segmentname);
+            var sgname = d3.select(this).attr("title");
+            console.log(sgname);
             console.log("inside get m");
-            return 'segmentname from m';
+            return this.sgname;
         }
          set angleMax(value) {
             //Empty the shadow dom
@@ -144,7 +144,7 @@
 
 
         //Helper function	
-   
+        
     
     
     });
