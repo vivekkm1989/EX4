@@ -7,6 +7,7 @@
 	 d3Script1.async = false;
     document.head.appendChild(d3Script);
 	document.head.appendChild(d3Script1);
+	var sgname;
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -30,7 +31,7 @@
     
         constructor() {
             super();
-		var sgname;
+		
             //Constants
             if (!window._d3){
                 window._d3 = d3;
