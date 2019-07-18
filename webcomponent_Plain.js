@@ -96,13 +96,13 @@
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
 			
-			window._d3.select(this).addEventListener('click', function() {
-    console.log('hooray!');
-			console.log(d3.select(this).attr("id"));
-});
+			this.addEventListener("click", event => {
+                        var event = new Event("onClick");
+                        this.dispatchEvent(event);
+			});
              
-                })
-		    .on("click",function() {
+                });
+		  /*  .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
                     {
@@ -115,7 +115,7 @@
                     console.log(segmentname);
                     this.fireEvent("onclick");	
                     this.fireEvent("click");
-                });
+                });*/
 
 
 		}, function(error) {
