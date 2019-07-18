@@ -42,10 +42,10 @@
             this._svgContainer;    
      
             //Adding event handler for click events
-		                    this.addEventListener("click", event => {
+		         /*           this.addEventListener("click", event => {
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
-                    });
+                    });*/
             
             this.redraw();
             
