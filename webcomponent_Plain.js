@@ -59,7 +59,7 @@
         }
          set angleMax(value) {
             //Empty the shadow dom
-            console.log("inside  set");
+            console.log("inside  set m");
             this.redraw();
         }; 
 
