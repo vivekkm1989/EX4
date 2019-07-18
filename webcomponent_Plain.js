@@ -81,7 +81,7 @@
                 //	var innerSVG = vis.html(documentFragment);
                 innerSVG.selectAll("polygon").style("fill", "yellow");
 			 console.log("before each");
-                window._d3.selectAll("polygon").each(function(d, i) {
+                innerSVG.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
                     //var sgm= window._d3.select(this)
                     console.log("incide each");
