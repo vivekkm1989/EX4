@@ -83,11 +83,7 @@
                   //  var sgm= window._d3.select(this);
 			
                    // this.attachClickListener(this);
-			           this.addEventListener("click", event => {					   
-                        var event = new Event("onClick");
-                        this.dispatchEvent(event);
-                    });
-             
+		
                 })			 
 		    .on("click",function() {
                     var title=d3.select(this).attr("title");			
@@ -125,7 +121,7 @@
             console.log("incide get");
             console.log(this);
             console.log(window._d3.select(this).attr("id").value);*/
-	     console.log(sgname);
+	    // console.log(sgname);
             return sgname;
         }
          set angleMax(value) {
