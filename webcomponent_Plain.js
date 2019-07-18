@@ -55,7 +55,7 @@
             var segmentname = d3.select(this).attr("title");
             console.log(segmentname);
             console.log("inside get m");
-            return "segmentname";
+            return 'segmentname from m';
         }
          set angleMax(value) {
             //Empty the shadow dom
