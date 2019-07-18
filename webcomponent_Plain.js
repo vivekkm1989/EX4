@@ -17,7 +17,7 @@
 
 
     class WM extends HTMLElement {
-	var sgname;
+	
 
         disconnectedCallback () {
             // your cleanup code goes here
@@ -30,6 +30,7 @@
     
         constructor() {
             super();
+		var sgname;
             //Constants
             if (!window._d3){
                 window._d3 = d3;
@@ -72,6 +73,7 @@
   .then(function(data) {
          
         var segmentname;
+		
                 var svgNode = data.getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
     		
@@ -93,7 +95,7 @@
              
                 })			 
 		    .on("click",function() {
-                    var title=d3.select(this).attr("title");
+                    var title=d3.select(this).attr("title");			
                     if(!title)
                     {
 			    sgname=d3.select(this).attr("id");
