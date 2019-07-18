@@ -15,9 +15,8 @@
       </style>
     `;
 
-    d3Script.onload = () => 
 
-    customElements.define('com-infy-wm-sol', class WM extends HTMLElement {
+    class WM extends HTMLElement {
 
 
         disconnectedCallback () {
@@ -51,20 +50,7 @@
             
         };
 
-        //Getters and Setters
-        getSegmentname() {
-            var sgname = d3.select(this).attr("title");
-            console.log(d3.select(this));
-            console.log(this);
-            console.log(window._d3.select(this).attr("id").value);
-            return sgname;
-        }
-         set angleMax(value) {
-            //Empty the shadow dom
-            console.log("inside  set m");
-            this.redraw();
-        }; 
-
+     
         redraw() {
             if (!this._svgContainer){
                 this._svgContainer = window._d3.select(this._shadowRoot)
@@ -95,17 +81,11 @@
                 innerSVG.selectAll("polygon").style("fill", "yellow");
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
-			
-			/*this.addEventListener("click", event => {
-                        var event = new Event("onClick");
-                        this.dispatchEvent(event);
-			});*/
+                    //var sgm= window._d3.select(this)
+                    console.log(this);
+                    this.attachClickListener(this);
              
-                })
-			.addEventListener("click", event => {
-                        var event = new Event("onClick");
-                        this.dispatchEvent(event);
-			});
+                });
 		  /*  .on("click",function() {
                     var id=d3.select(this).attr("title");
                     if(!title)
@@ -128,38 +108,44 @@
         return;
     }
 
-		});   
-		
-            /* window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
-		    console.log("inside file load");
-                if (error) {
-                    console.log(error);
-                    return;
-                }
-    
-                var svgNode = documentFragment
-                    .getElementsByTagName("svg")[0];
-                //use plain Javascript to extract the node
-    		console.log(svgNode);
-                vis.node().appendChild(svgNode);
-                var innerSVG = vis.select("svg");
-                //	var innerSVG = vis.html(documentFragment);
-                innerSVG.selectAll("polygon").style("fill", "yellow");
-                window._d3.selectAll("polygon").each(function(d, i) {
-                    arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
-                });
-            }); */
-
-
-       
+		});   	
 	
         };
 
-
+         
         //Helper function	
+        attachClickListener(SvgNode) {
+            
+            SvgNode.forEach(node => node.on("click", () => 
+            {
+           var a= window._d3.select(this).attr("id");
+           console.log(a);
+            }
         
+        ));
+        }
     
-    
-    });
+          //Getters and Setters
+          getSegmentname() {
+            var sgname = d3.select(this).attr("title");
+            console.log(d3.select(this));
+            console.log(this);
+            console.log(window._d3.select(this).attr("id").value);
+            return sgname;
+        }
+         set angleMax(value) {
+            //Empty the shadow dom
+            console.log("inside  set m");
+            this.redraw();
+        }; 
+
+    }
+
+
+
+    d3Script.onload = () => {
+
+    customElements.define('com-infy-wm-sol', WM);
+    };
         
 })();
