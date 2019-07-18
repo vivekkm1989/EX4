@@ -54,6 +54,7 @@
         get segmentname() {
             var segmentname = d3.select(this).attr("title");
             console.log(segmentname);
+		console.log("inside get m");
             return segmentname;
         }
         /* set angleMax(value) {
