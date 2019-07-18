@@ -51,7 +51,7 @@
         };
 
         //Getters and Setters
-        get segmentname() {
+        getSegmentname() {
             var sgname = d3.select(this).attr("title");
             console.log(sgname);
             console.log("inside get m");
