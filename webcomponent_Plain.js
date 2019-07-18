@@ -95,10 +95,7 @@
                 innerSVG.selectAll("polygon").style("fill", "yellow");
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
-                    this.addEventListener("click", event => {
-                        var event = new Event("onClick");
-                        this.dispatchEvent(event);
-                    });
+             
                 })
 			
 			.addEventListener('click', function() {
