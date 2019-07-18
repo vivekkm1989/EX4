@@ -60,8 +60,8 @@
                 this._svgContainer = window._d3.select(this._shadowRoot)
                 .append("svg:svg")
                 .attr("id", "rect")
-                .attr("width", 100%)
-                .attr("height", 100%);
+                .attr("width", "100%")
+                .attr("height", "100%");
             }
 
             var vis=this._svgContainer;
