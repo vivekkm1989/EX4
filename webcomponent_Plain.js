@@ -59,7 +59,6 @@
             if (this._svgContainer){
                 this._svgContainer._groups[0][0].innerHTML = "";
             }
-
             this._endAngleDeg = value;
             this.redraw();
         }; */
@@ -75,12 +74,7 @@
 
             var vis=this._svgContainer;
 		
-	/*	define(["require"], function(require) {
-   var eSvg = require.toUrl("https://vivekkm1989.github.io/Rect/image.svg");
-});*/
-           
-		//console.log(eSvg);
-		
+   
 		 if (window._d3){
                 console.log("yes");
             } else console.log("no");
@@ -88,7 +82,8 @@
 		//new code added
 		d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
   .then(function(data) {
-		console.log(data);   
+        console.log(data);   
+        var segmentname;
                 var svgNode = data.getElementsByTagName("svg")[0];
                 //use plain Javascript to extract the node
     		console.log(svgNode);
@@ -98,17 +93,29 @@
                 innerSVG.selectAll("polygon").style("fill", "yellow");
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
+                })
+                .on("click",function() {
+                    var id=d3.select(this).attr("title");
+                    if(!title)
+                    {
+                    segmentname = d3.select(this).attr("id");
+                    console.log(segmentname);
+                    }
+                    else 
+                    segmentname = d3.select(this).attr("title");
+                    console.log(segmentname);
                 });
+
+
 		}, function(error) {
-    if (error) {
-        console.log("inside new");
+    if (error) {        
         console.log(error);
         return;
     }
 
 		});   
 		
-            window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
+            /* window._d3.xml("https://vivekkm1989.github.io/Rect/image.svg", function(error, documentFragment) {
 		    console.log("inside file load");
                 if (error) {
                     console.log(error);
@@ -126,7 +133,7 @@
                 window._d3.selectAll("polygon").each(function(d, i) {
                     arrsvgelement.push(window._d3.select(this).attr("id").replace("_", " "));
                 });
-            });
+            }); */
 
 
        
