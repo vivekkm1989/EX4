@@ -65,7 +65,7 @@
    
 		 if (window._d3){
                 
-			 le.log("yes");
+			
             } else console.log("no");
 		
 		//new code added
