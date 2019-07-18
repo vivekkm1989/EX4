@@ -83,10 +83,15 @@
 			 console.log("before each");
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
-                    var sgm= window._d3.select(this);
-			console.log(sgm);
+                  //  var sgm= window._d3.select(this);
+			//console.log(sgm);
                     console.log("incide each");
-                    this.attachClickListener(this);
+                   // this.attachClickListener(this);
+			           this.addEventListener("click", event => {
+					   
+                        var event = new Event("onClick");
+                        this.dispatchEvent(event);
+                    });
              
                 });
 			 console.log("after each");
