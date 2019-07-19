@@ -1,0 +1,45 @@
+{
+	"name": "Rect",
+	"description": "Rectangle",
+	"eula": "",
+	"vendor": "Infosys",
+	"license": "",
+	"id": "com.infy.sample.rect.solution",
+	"newInstancePrefix": "Rect_solv",
+	"version": "1.0.0",
+	"icon": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-infy-wm-sol",
+            "url": "https://vivekkm1989.github.io/Rect/webcomponent_Plain.js",
+			
+            "integrity": "",
+            "ignoreIntegrity" : true
+		}		
+	
+    ],
+	"properties": {
+		"segmentname": {
+			"type": "string",
+			"description": "SVG segmentname",
+			"default" : ""
+		}
+	},
+	
+	"methods": {
+		"getSegmentname": {
+			"returnType": "string",
+			"description": "Returns the segmentname.",
+			"parameters": []
+		
+			
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Rectangle"
+		}
+
+	}
+}
