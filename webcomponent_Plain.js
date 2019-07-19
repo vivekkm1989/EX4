@@ -118,8 +118,7 @@
             /* var sgname = d3.select(this).attr("title");
            */
             // console.log("get m "+sgname);
-            var ar = new Array()
-            
+            var ar = new Array()            
             ar[0]="Alcohol";
             ar[1]="Juices";
            // sgname=ar;
