@@ -79,7 +79,7 @@
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
                 innerSVG.selectAll("polygon").style("color", "white");
-               // innerSVG.selectAll("polygon").style["color"]="white";
+                innerSVG.selectAll("polygon").style("fill", "white");
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
                   //  var sgm= window._d3.select(this);
@@ -93,20 +93,23 @@
                 segmentname = d3.select(this).attr("id");
             //console.log(sgname+" "+ segmentname);
             
-          console.log(this.style.color );
+          console.log(this.style.fill );
 			
 			
 			//console.log(document.getElementById(segmentname).style.backgroundcolor);
                 if(this.style.color=="white")
                 {
-                    console.log("color is white");
+                    innerSVG.selectAll("polygon").style("fill", "white");
                     innerSVG.selectAll("polygon").style("color", "white");
-                    d3.select(this).style["color"]="yellow"; 
+
+                    d3.select(this).style("fill", "yellow");
+                    d3.select(this).style("color", "yellow");
                 }
-                else if (this.style["color"]=="yellow")
+                else if (this.style.color=="yellow")
                 {
-                    console.log("color is yellow");
-                    innerSVG.selectAll("polygon").style["color"]="white";
+                    
+                    innerSVG.selectAll("polygon").style("fill", "white");
+                    innerSVG.selectAll("polygon").style("color", "white");
                 }
                 /*  if(flag==0)  
                  {
