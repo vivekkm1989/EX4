@@ -92,9 +92,9 @@
                   sgname=d3.select(this).attr("id");
                 segmentname = d3.select(this).attr("id");
 			//console.log(sgname+" "+ segmentname);
-        	
-			var c=document.getElementById(segmentname).style;
-			console.log(c.fill);
+        	var name=segmentname;
+			var c=document.getElementById("Theft");
+			console.log(c.style.fill);
                 if(d3.select(this).style.color=="white")
                 {
                     console.log("color is white");
