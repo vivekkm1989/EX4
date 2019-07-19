@@ -94,7 +94,7 @@
 			//console.log(sgname+" "+ segmentname);
           console.log(d3.select(this).attr("fill", function(d){
   return d.fill;
-});
+})
 		     		     );
 			
 			
