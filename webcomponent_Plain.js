@@ -118,8 +118,8 @@
            */
           var ar = new Array()
             
-          ar[0]="Alcohol";
-          ar[1]="Juices";
+          ar[0]="Las Vegas";
+          ar[1]="Oakland";
          // sgname=ar;
           return ar;
         }       
