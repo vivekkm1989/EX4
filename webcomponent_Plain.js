@@ -8,7 +8,6 @@
     document.head.appendChild(d3Script);
     document.head.appendChild(d3Script1);
     var sgname;
-  
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
       <style>
@@ -117,12 +116,12 @@
         getSegmentname() {
             /* var sgname = d3.select(this).attr("title");
            */
-            // console.log("get m "+sgname);
-            var ar = new Array()            
-            ar[0]="Alcohol";
-            ar[1]="Juices";
-           // sgname=ar;
-            return ar;
+          var ar = new Array()
+            
+          ar[0]="Alcohol";
+          ar[1]="Juices";
+         // sgname=ar;
+          return ar;
         }       
 
     }
