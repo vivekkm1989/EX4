@@ -86,15 +86,16 @@
                             //change color on click
                             if (this.style.fill == "white") {                               
                                 innerSVG.selectAll("polygon").style("fill", "white");
-                                d3.select(this).style("fill", "yellow");                                
+                                d3.select(this).style("fill", "yellow"); 
+                                  sgname = d3.select(this).attr("id");
+                            segmentname = d3.select(this).attr("id"); 
                             }
                             else if (this.style.fill == "yellow") {
                                  sgname="";
                                 segmentname="";
                                 innerSVG.selectAll("polygon").style("fill", "white");                               
                             }  
-                          sgname = d3.select(this).attr("id");
-                            segmentname = d3.select(this).attr("id");   
+                          
                         });
 
 
