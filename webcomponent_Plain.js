@@ -87,13 +87,14 @@
                    // this.attachClickListener(this);
 		
                 })			 
-		    .on("click",function() {
+		    .on("click",function(d) {
                 
                   sgname=d3.select(this).attr("id");
                 segmentname = d3.select(this).attr("id");
 			//console.log(sgname+" "+ segmentname);
         	var name=segmentname;
-			var c=document.getElementById("Theft");
+			var c=document.getElementById(name);
+			console.log(d);
 			console.log(c.style.fill);
                 if(d3.select(this).style.color=="white")
                 {
