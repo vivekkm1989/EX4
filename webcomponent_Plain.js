@@ -7,8 +7,7 @@
 	 d3Script1.async = false;
     document.head.appendChild(d3Script);
 	document.head.appendChild(d3Script1);
-	var sgname;
-
+    var sgname;
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
       <style>
@@ -40,14 +39,14 @@
             this._shadowRoot = this.attachShadow({mode: 'open'});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.style.height = "100%";  //Beta Workaround
-		const aabb = this.getBoundingClientRect();
+		    const aabb = this.getBoundingClientRect();
             this._width = aabb.width;
             this._height = aabb.height;
             this._svgContainer;   
 		
      this.redraw();
             //Adding event handler for click events
-		                  this.addEventListener("click", event => {
+		                this.addEventListener("click", event => {
                         var event = new Event("onClick");
                         this.dispatchEvent(event);
                     });                      
@@ -79,7 +78,7 @@
                 vis.node().appendChild(svgNode);
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
-                innerSVG.selectAll("polygon").style("fill", "yellow");
+                innerSVG.selectAll("polygon").style("fill", "white");
 			
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
@@ -89,18 +88,31 @@
 		
                 })			 
 		    .on("click",function() {
-                    var title=d3.select(this).attr("title");			
-                    if(!title)
-                    {
-			    sgname=d3.select(this).attr("id");
-                    segmentname = d3.select(this).attr("id");
-                  
-                    }
-                    else {
-			    sgname=d3.select(this).attr("title");
-                    segmentname = d3.select(this).attr("title");
-                    
-		    }
+                if(d3.select(this).style.color=="white")
+                {
+                    console.log("color is white");
+                    innerSVG.selectAll("polygon").style("fill", "white");
+                    d3.select(this).style("fill", "yellow"); 
+                }
+                else if (d3.select(this).style.color=="yellow")
+                {
+                    console.log("color is yellow");
+                    innerSVG.selectAll("polygon").style("fill", "white");
+                }
+                /*  if(flag==0)  
+                 {
+                    innerSVG.selectAll("polygon").style("fill", "white");
+                    d3.select(this).style("fill", "yellow");
+                    flag=1; // flag=1 second click
+                 }
+                 else if (flag==1)
+                 {
+                    innerSVG.selectAll("polygon").style("fill", "white");
+                    flag==0; // flag=0 first click
+                 } */
+                  sgname=d3.select(this).attr("id");
+                segmentname = d3.select(this).attr("id");
+              
                    
                 });
 
