@@ -92,11 +92,7 @@
                   sgname=d3.select(this).attr("id");
                 segmentname = d3.select(this).attr("id");
 			//console.log(sgname+" "+ segmentname);
-          console.log(d3.select(this).attr("fill", function(d){
-  return d.fill;
-})
-		     		     );
-			
+          console.log(document.getElementById(segmentname).color());		
 			
 			console.log(document.getElementById(segmentname).style.backgroundcolor);
                 if(d3.select(this).style.color=="white")
