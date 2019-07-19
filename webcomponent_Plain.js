@@ -116,7 +116,8 @@
         getSegmentname() {
             /* var sgname = d3.select(this).attr("title");
            */
-             console.log("get m "+sgname);
+            // console.log("get m "+sgname);
+            sgname="test";
             return sgname;
         }       
 
