@@ -91,8 +91,8 @@
                             segmentname = d3.select(this).attr("id"); 
                             }
                             else if (this.style.fill == "yellow") {
-                                 sgname="";
-                                segmentname="";
+                                 sgname=null;
+                                segmentname=null;
                                 innerSVG.selectAll("polygon").style("fill", "white");                               
                             }  
                           
@@ -116,7 +116,7 @@
         getSegmentname() {
             /* var sgname = d3.select(this).attr("title");
            */
-            // console.log(sgname);
+             console.log("get m "+sgname);
             return sgname;
         }       
 
