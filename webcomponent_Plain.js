@@ -97,7 +97,7 @@
 			
 			
 			//console.log(document.getElementById(segmentname).style.backgroundcolor);
-                if(this.style.color=="white")
+                if(this.style.fill=="white")
                 {
                     innerSVG.selectAll("polygon").style("fill", "white");
                   //  innerSVG.selectAll("polygon").style("color", "white");
@@ -105,7 +105,7 @@
                     d3.select(this).style("fill", "yellow");
                   //  d3.select(this).style("color", "yellow");
                 }
-                else if (this.style.color=="yellow")
+                else if (this.style.fill=="yellow")
                 {
                     
                     innerSVG.selectAll("polygon").style("fill", "white");
