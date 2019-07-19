@@ -78,8 +78,8 @@
                 vis.node().appendChild(svgNode);
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
-                innerSVG.selectAll("polygon").style("fill", "white");
-			
+               // innerSVG.selectAll("polygon").style("fill", "white");
+                innerSVG.selectAll("polygon").style["color"]="white";
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
                   //  var sgm= window._d3.select(this);
@@ -87,25 +87,26 @@
                    // this.attachClickListener(this);
 		
                 })			 
-		    .on("click",function(d) {
+		    .on("click",function() {
                 
                   sgname=d3.select(this).attr("id");
                 segmentname = d3.select(this).attr("id");
-			//console.log(sgname+" "+ segmentname);
-        	var name=segmentname;
-			var c=document.getElementById(name);
-			console.log(d);
-			console.log(c.style.fill);
-                if(d3.select(this).style.color=="white")
+            //console.log(sgname+" "+ segmentname);
+            
+          console.log(this.style["color"] );
+			
+			
+			//console.log(document.getElementById(segmentname).style.backgroundcolor);
+                if(this.style["color"]=="white")
                 {
                     console.log("color is white");
-                    innerSVG.selectAll("polygon").style("fill", "white");
-                    d3.select(this).style("fill", "yellow"); 
+                    innerSVG.selectAll("polygon").style["color"]="white";
+                    d3.select(this).style["color"]="yellow"; 
                 }
-                else if (d3.select(this).style.color=="yellow")
+                else if (this.style["color"]=="yellow")
                 {
                     console.log("color is yellow");
-                    innerSVG.selectAll("polygon").style("fill", "white");
+                    innerSVG.selectAll("polygon").style["color"]="white";
                 }
                 /*  if(flag==0)  
                  {
