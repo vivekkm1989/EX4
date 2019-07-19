@@ -78,7 +78,7 @@
                 vis.node().appendChild(svgNode);
                 var innerSVG = vis.select("svg");
                 //	var innerSVG = vis.html(documentFragment);
-               // innerSVG.selectAll("polygon").style("fill", "white");
+                innerSVG.selectAll("polygon").style("color", "white");
                 innerSVG.selectAll("polygon").style["color"]="white";
                 innerSVG.selectAll("polygon").each(function(d, i) {
                     window._d3.select(this).attr("id").replace("_", " ");
