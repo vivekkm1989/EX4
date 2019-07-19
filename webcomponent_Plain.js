@@ -88,7 +88,10 @@
 		
                 })			 
 		    .on("click",function() {
-			console.log(d3.select(this).style.color);
+                
+                  sgname=d3.select(this).attr("id");
+                segmentname = d3.select(this).attr("id");
+                console.log(document.getElementById(segmentname).style.color);
                 if(d3.select(this).style.color=="white")
                 {
                     console.log("color is white");
@@ -111,10 +114,6 @@
                     innerSVG.selectAll("polygon").style("fill", "white");
                     flag==0; // flag=0 first click
                  } */
-                  sgname=d3.select(this).attr("id");
-                segmentname = d3.select(this).attr("id");
-              
-                   
                 });
 
 
