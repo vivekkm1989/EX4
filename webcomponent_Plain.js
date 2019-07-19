@@ -88,6 +88,7 @@
 		
                 })			 
 		    .on("click",function() {
+			console.log(d3.select(this).style.color);
                 if(d3.select(this).style.color=="white")
                 {
                     console.log("color is white");
