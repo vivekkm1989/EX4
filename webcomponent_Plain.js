@@ -68,7 +68,6 @@
             //load SVG
             d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
                 .then(function (data) {
-
                     var segmentname;
                     var svgNode = data.getElementsByTagName("svg")[0];
                     //use plain Javascript to extract the node
