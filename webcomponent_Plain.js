@@ -9,6 +9,7 @@
     document.head.appendChild(d3Script1);
     var sgname;
     var flag=0; //check if arr already having the value
+    var checkload=0;
     var arr = new Array();
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -19,12 +20,12 @@
 
     class WM extends HTMLElement {
 
-        console.log("before svg");
+
         disconnectedCallback() {
             // your cleanup code goes here
             try {
-                document.head.removeChild(d3Script);
-                document.head.removeChild(d3Script1);
+              //  document.head.removeChild(d3Script);
+               // document.head.removeChild(d3Script1);
             }
             catch{ }
         }
@@ -44,8 +45,10 @@
             this._width = aabb.width;
             this._height = aabb.height;
             this._svgContainer;
-
+            if(checkload==0)
+            {
             this.redraw();
+            }
             //Adding event handler for click events
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -87,8 +90,16 @@
                             
                             //change color on click
                             if (this.style.fill == "white") {                               
-                              //  innerSVG.selectAll("polygon").style("fill", "white");
+                               // innerSVG.selectAll("polygon").style("fill", "white");
                                 d3.select(this).style("fill", "yellow"); 
+                             /*    innerSVG.selectAll("polygon").each(function ()
+                                 {
+                                    var sgcolor=this.style.fill;
+                                    if(sgcolor=="white")
+                                    {
+                                        d3.select(this).style("fill", "yellow");
+                                    }
+                                 }) ;  */
                                   sgname = d3.select(this).attr("id");
                             segmentname = d3.select(this).attr("id"); 
                             for(var i=0;i<arr.length;i++)
@@ -98,7 +109,6 @@
                                 flag=1; // segmentname already exist in arr
                                 }
                             } 
-                                
                             if(flag==0)
                             {
                             arr.push(segmentname);
@@ -109,8 +119,8 @@
                             else if (this.style.fill == "yellow") {
                                  sgname="";
                                 segmentname="";
-                               // innerSVG.selectAll("polygon").style("fill", "white");
-                                d3.select(this).style("fill", "white"); 
+                              //  innerSVG.selectAll("polygon").style("fill", "white");
+                              d3.select(this).style("fill", "white"); 
                                 var removename=  d3.select(this).attr("id");
                                 for(var i=0;i<arr.length;i++)
                                 {
@@ -131,7 +141,7 @@
                     }
 
                 });
-
+                checkload=1;
         };
 
 
