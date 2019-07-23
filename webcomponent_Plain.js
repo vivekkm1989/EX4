@@ -129,7 +129,7 @@
                                     }
                                 }                              
                             }  
-                          document.getElementById("Las Vegas").style.background ="red";
+                         console.log(document.getElementById('rect').getSVGDocument());
                         });
 
 
