@@ -98,6 +98,7 @@
                                 flag=1; // segmentname already exist in arr
                                 }
                             } 
+                                
                             if(flag==0)
                             {
                             arr.push(segmentname);
