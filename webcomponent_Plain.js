@@ -8,6 +8,7 @@
     document.head.appendChild(d3Script);
     document.head.appendChild(d3Script1);
     var sgname;
+    var flag=0; //check if arr already having the value
     var arr = new Array();
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
@@ -90,15 +91,28 @@
                                 d3.select(this).style("fill", "yellow"); 
                                   sgname = d3.select(this).attr("id");
                             segmentname = d3.select(this).attr("id"); 
+                            for(var i=0;i<arr.length;i++)
+                            {
+                                if(arr[i]==segmentname)
+                                {
+                                flag=1; // segmentname already exist in arr
+                                }
+                            } 
+                            if(flag==0)
+                            {
                             arr.push(segmentname);
+                            }
+                            else 
+                            flag=0;
                             }
                             else if (this.style.fill == "yellow") {
                                  sgname="";
                                 segmentname="";
-                                innerSVG.selectAll("polygon").style("fill", "white"); 
+                                innerSVG.selectAll("polygon").style("fill", "white");
+                                var removename=  d3.select(this).attr("id");
                                 for(var i=0;i<arr.length;i++)
                                 {
-                                    if(arr[i]==segmentname)
+                                    if(arr[i]==removename)
                                     {
                                     arr.splice(i,1);
                                     }
