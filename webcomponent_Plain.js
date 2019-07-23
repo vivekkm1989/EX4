@@ -129,7 +129,7 @@
                                     }
                                 }                              
                             }  
-                         console.log(document.getElementById('rect').getSVGDocument());
+                         console.log(document.getElementById("rect"));
                         });
 
 
