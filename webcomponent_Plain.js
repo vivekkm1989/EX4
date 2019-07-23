@@ -19,11 +19,11 @@
 
     class WM extends HTMLElement {
 
-
+        console.log("before svg");
         disconnectedCallback() {
             // your cleanup code goes here
             try {
-            //    document.head.removeChild(d3Script);
+                document.head.removeChild(d3Script);
                 document.head.removeChild(d3Script1);
             }
             catch{ }
