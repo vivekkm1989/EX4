@@ -45,10 +45,9 @@
             this._width = aabb.width;
             this._height = aabb.height;
             this._svgContainer;
-            if(checkload==0)
-            {
+           
             this.redraw();
-            }
+           
             //Adding event handler for click events
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
