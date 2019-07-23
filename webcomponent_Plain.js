@@ -8,6 +8,7 @@
     document.head.appendChild(d3Script);
     document.head.appendChild(d3Script1);
     var sgname;
+    var arr = new Array();
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
       <style>
@@ -68,6 +69,7 @@
             //load SVG
             d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
                 .then(function (data) {
+
                     var segmentname;
                     var svgNode = data.getElementsByTagName("svg")[0];
                     //use plain Javascript to extract the node
@@ -88,11 +90,19 @@
                                 d3.select(this).style("fill", "yellow"); 
                                   sgname = d3.select(this).attr("id");
                             segmentname = d3.select(this).attr("id"); 
+                            arr.push(segmentname);
                             }
                             else if (this.style.fill == "yellow") {
                                  sgname="";
                                 segmentname="";
-                                innerSVG.selectAll("polygon").style("fill", "white");                               
+                                innerSVG.selectAll("polygon").style("fill", "white"); 
+                                for(var i=0;i<arr.length;i++)
+                                {
+                                    if(arr[i]==segmentname)
+                                    {
+                                    arr.splice(i,1);
+                                    }
+                                }                              
                             }  
                           
                         });
@@ -115,12 +125,13 @@
         getSegmentname() {
             /* var sgname = d3.select(this).attr("title");
            */
-          var ar = new Array()
+            // console.log("get m "+sgname);
+           
             
-          ar[0]="Las Vegas";
-          ar[1]="Oakland";
-         // sgname=ar;
-          return ar;
+          //  ar[0]="Alcohol";
+          //  ar[1]="Juices";
+           console.log(arr);
+            return arr;
         }       
 
     }
