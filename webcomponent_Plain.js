@@ -67,7 +67,6 @@
             }
 
             var vis = this._svgContainer;
-
             //new code added
             //load SVG
             d3.xml("https://vivekkm1989.github.io/Rect/image.svg")
