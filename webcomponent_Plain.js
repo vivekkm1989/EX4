@@ -155,7 +155,7 @@
           //  ar[0]="Alcohol";
           //  ar[1]="Juices";
            console.log(arr);
-            return {id:arr};
+            return arr;
         }       
 
     }
