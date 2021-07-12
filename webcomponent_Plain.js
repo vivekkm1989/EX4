@@ -69,7 +69,7 @@
             var vis = this._svgContainer;
             //new code added
             //load SVG
-            d3.xml("https://vivekkm1989.github.io/Rect/US.svg")
+            d3.xml("https://vivekkm1989.github.io/Rect/New.svg")
                 .then(function (data) {
 
                     var segmentname;
