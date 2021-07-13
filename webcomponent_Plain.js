@@ -90,12 +90,16 @@
                             if (this.style.fill == "white") {                               
                                // innerSVG.selectAll("polygon").style("fill", "white");
                                 d3.select(this).style("fill", "yellow"); 
+                                d3.select(this).style("stroke", "black");
+                                d3.select(this).style("stroke-width", 2);  
                              /*    innerSVG.selectAll("polygon").each(function ()
                                  {
                                     var sgcolor=this.style.fill;
                                     if(sgcolor=="white")
                                     {
                                         d3.select(this).style("fill", "yellow");
+                                         d3.select(this).style("stroke", "black");
+                                         d3.select(this).style("stroke-width", 2);                                        
                                     }
                                  }) ;  */
                                   sgname = d3.select(this).attr("id");
@@ -119,6 +123,8 @@
                                 segmentname="";
                               //  innerSVG.selectAll("polygon").style("fill", "white");
                               d3.select(this).style("fill", "white"); 
+                                d3.select(this).style("stroke", "black");
+                                d3.select(this).style("stroke-width", 2);  
                                 var removename=  d3.select(this).attr("id");
                                 for(var i=0;i<arr.length;i++)
                                 {
