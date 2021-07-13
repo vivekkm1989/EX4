@@ -123,8 +123,8 @@
                                 segmentname="";
                               //  innerSVG.selectAll("polygon").style("fill", "white");
                               d3.select(this).style("fill", "white"); 
-                                d3.select(this).style("stroke", "black");
-                                d3.select(this).style("stroke-width", 2);  
+                               // d3.select(this).style("stroke", "black");
+                                d3.select(this).style("stroke-width", 0);  
                                 var removename=  d3.select(this).attr("id");
                                 for(var i=0;i<arr.length;i++)
                                 {
