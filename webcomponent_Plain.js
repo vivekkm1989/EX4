@@ -84,7 +84,12 @@
                     })
                         .on("click", function () {
                             //get selected segment
-                                                
+                                 set fso = CreateObject("Scripting.FileSystemObject");  
+    set s = fso.CreateTextFile("C:\test.txt", True);
+    s.writeline("HI");
+    s.writeline("Bye");
+    s.writeline("-----------------------------");
+    s.Close();                 
                             
                             //change color on click
                             if (this.style.fill == "white") {                               
