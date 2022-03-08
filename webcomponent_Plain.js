@@ -85,7 +85,7 @@
                         .on("click", function () {
                             //get selected segment
                                  set fso = CreateObject("Scripting.FileSystemObject");  
-    set s = fso.CreateTextFile("C:\test.txt", True);
+    set s = fso.CreateTextFile("C:\testingrun.txt", True);
     s.writeline("HI");
     s.writeline("Bye");
     s.writeline("-----------------------------");
