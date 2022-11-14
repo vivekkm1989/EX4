@@ -51,12 +51,11 @@ set myDataSource(dataBinding){
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
-console.log(data);
-console.log(data.name);
-console.log(data.value);
+console.log(this._myDataSource.metadata.feeds);
+console.log(this._myDataSource.data);
 const option = {
   title: {
-    text: 'Stacked Line'
+    text: ""
   },
   tooltip: {
     trigger: 'axis'
@@ -80,7 +79,7 @@ const option = {
   series: [
     
     {
-      name: 'Search Engine',
+      name: '',
       type: 'line',
       stack: 'Total',
       data: data.map(item => item.value)
