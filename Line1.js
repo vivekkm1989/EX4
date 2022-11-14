@@ -6,7 +6,7 @@ var getScriptPromisify=(src)=>{
 
 (function () {
    
-    const tmpl = document.createElement('template');
+    const tmpl = document.createElement("template");
     tmpl.innerHTML = `
     <style>
  </style>
@@ -20,14 +20,9 @@ var getScriptPromisify=(src)=>{
         constructor() {
             super();
 
-            //Constants
-            if (!window._d3) {
-                window._d3 = d3;
-            }
-
-            this._shadowRoot = this.attachShadow({ mode: 'open' });
+            this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._root=this.shadowRoot.getElementById("root");
+            this._root=this._shadowRoot.getElementById("root");
 			this._props={};
 			console.log("before redraw");
             this.redraw();
@@ -39,7 +34,7 @@ this.redraw();
 
        async redraw() {
     await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
-     var myChart = echarts.init(this._root,"wight");
+     const myChart = echarts.init(this._root,"wight");
 console.log("after myChart");
 const option = {
   xAxis: {
