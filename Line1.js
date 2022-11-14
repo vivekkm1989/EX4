@@ -52,7 +52,8 @@ set myDataSource(dataBinding){
 	});
      const myChart = echarts.init(this._root,"wight");
 console.log(data);
-
+console.log(measure);
+console.log(dimension);
 const option = {
   title: {
     text: 'Stacked Line'
