@@ -59,9 +59,6 @@ option && myChart.setOption(option);
 
     }
 
-    d3Script.onload = () => {
-
         customElements.define('com-infy-wm-sol', WMM);
-    };
 
 })();
