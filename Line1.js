@@ -35,7 +35,7 @@ var getScriptPromisify=(src)=>{
 
        async redraw() {
     await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
-     var myChart = echarts.init(this._root,"wight");
+     const myChart = echarts.init(this._root,"wight");
 console.log("after myChart");
 const option = {
   xAxis: {
