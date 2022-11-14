@@ -1,3 +1,9 @@
+var getScript=(src)=>{
+    return new Promise((resolve)=>{
+        $.getScript(src,resolve);
+    });
+};
+
 (function () {
     let d3Script = document.createElement('script');
     let d3Script1 = document.createElement('script');
@@ -48,7 +54,11 @@
             this._height = aabb.height;
                   
             this.redraw();
-           
+
+
+ // do something with the passed text
+}
+await getScript("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
             //Adding event handler for click events
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
