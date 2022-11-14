@@ -72,7 +72,7 @@ const option = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: data.name()
+    data: data.name
   },
   yAxis: {
     type: 'value'
@@ -83,7 +83,7 @@ const option = {
       name: 'Search Engine',
       type: 'line',
       stack: 'Total',
-      data: data.value()
+      data: data.value
     }
   ]
 };
