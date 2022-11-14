@@ -13,10 +13,16 @@
     var arr = new Array();
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-      <style>
-      
-      </style>
-    `;
+    <style>
+ :host {
+ border-radius: 25px;
+ border-width: 4px;
+ border-color: black;
+ border-style: solid;
+ display: block;
+ }
+ </style>
+ `;
 
     class WM extends HTMLElement {
 
@@ -58,111 +64,28 @@
 
 
         redraw() {
-            if (!this._svgContainer) {
-                this._svgContainer = window._d3.select(this._shadowRoot)
-                    .append("svg:svg")
-                    .attr("id", "rect")
-                    .attr("width", "100%")
-                    .attr("height", "100%");
-            }
+     var myChart = echarts.init(this._root,"wight");
+var option;
 
-            var vis = this._svgContainer;
-            //new code added
-            //load SVG
-            d3.xml("https://vivekkm1989.github.io/Rect/New.svg")
-                .then(function (data) {
+const option = {
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [150, 230, 224, 218, 135, 147, 260],
+      type: 'line'
+    }
+  ]
+};
 
-                    var segmentname;
-                    var svgNode = data.getElementsByTagName("svg")[0];
-                    //use plain Javascript to extract the node
+option && myChart.setOption(option);
 
-                    vis.node().appendChild(svgNode);
-                    var innerSVG = vis.select("svg");                    
-                    innerSVG.selectAll("polygon").style("fill", "white");
-                    innerSVG.selectAll("polygon").each(function () {                    
-                   
-                    })
-                        .on("click", function () {
-                            //get selected segment
-              
-                            
-                            //change color on click
-                            if (this.style.fill == "white") {                               
-                               // innerSVG.selectAll("polygon").style("fill", "white");
-                                d3.select(this).style("fill", "yellow"); 
-                                d3.select(this).style("stroke", "black");
-                                d3.select(this).style("stroke-width", 2);  
-                             /*    innerSVG.selectAll("polygon").each(function ()
-                                 {
-                                    var sgcolor=this.style.fill;
-                                    if(sgcolor=="white")
-                                    {
-                                        d3.select(this).style("fill", "yellow");
-                                         d3.select(this).style("stroke", "black");
-                                         d3.select(this).style("stroke-width", 2);                                        
-                                    }
-                                 }) ;  */
-                                  sgname = d3.select(this).attr("id");
-                            segmentname = d3.select(this).attr("id"); 
-                            for(var i=0;i<arr.length;i++)
-                            {
-                                if(arr[i]==segmentname)
-                                {
-                                flag=1; // segmentname already exist in arr
-                                }
-                            } 
-                            if(flag==0)
-                            {
-                            arr.push(segmentname);
-                            }
-                            else 
-                            flag=0;
-                            }
-                            else if (this.style.fill == "yellow") {
-                                 sgname="";
-                                segmentname="";
-                              //  innerSVG.selectAll("polygon").style("fill", "white");
-                              d3.select(this).style("fill", "white"); 
-                               // d3.select(this).style("stroke", "black");
-                                d3.select(this).style("stroke-width", 0);  
-                                var removename=  d3.select(this).attr("id");
-                                for(var i=0;i<arr.length;i++)
-                                {
-                                    if(arr[i]==removename)
-                                    {
-                                    arr.splice(i,1);
-                                    }
-                                }                              
-                            }  
-                         console.log(document.getElementById("rect"));
-                        });
-
-
-                }, function (error) {
-                    if (error) {
-                        console.log(error);
-                        return;
-                    }
-
-                });
-                checkload=1;
         };
-
-
-     
-
-        //Getters and Setters
-        getSegmentname() {
-            /* var sgname = d3.select(this).attr("title");
-           */
-            // console.log("get m "+sgname);
-           
-            
-          //  ar[0]="Alcohol";
-          //  ar[1]="Juices";
-           console.log(arr);
-            return arr;
-        }       
 
     }
 
