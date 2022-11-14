@@ -52,8 +52,8 @@ set myDataSource(dataBinding){
 	});
      const myChart = echarts.init(this._root,"wight");
 console.log(data);
-console.log(measure);
-console.log(dimension);
+console.log(data.name);
+console.log(data.value);
 const option = {
   title: {
     text: 'Stacked Line'
@@ -72,7 +72,7 @@ const option = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: data.name
+    data: data.map(item => item.name)
   },
   yAxis: {
     type: 'value'
@@ -83,7 +83,7 @@ const option = {
       name: 'Search Engine',
       type: 'line',
       stack: 'Total',
-      data: data.value
+      data: data.map(item => item.value)
     }
   ]
 };
