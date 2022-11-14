@@ -1,4 +1,4 @@
-var getScript=(src)=>{
+var getScriptPromisify=(src)=>{
     return new Promise((resolve)=>{
         $.getScript(src,resolve);
     });
@@ -58,7 +58,7 @@ var getScript=(src)=>{
 
  // do something with the passed text
 }
-await getScript("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
+await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
             //Adding event handler for click events
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
