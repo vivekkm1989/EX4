@@ -67,11 +67,11 @@ var getScriptPromisify=(src)=>{
 
         };
 
-
+console.log("outside redraw");
        async redraw() {
-    await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
+    await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
      var myChart = echarts.init(this._root,"wight");
-
+console.log("after myChart");
 const option = {
   xAxis: {
     type: 'category',
@@ -87,7 +87,7 @@ const option = {
     }
   ]
 };
-
+console.log("before option");
 option && myChart.setOption(option);
 
         };
