@@ -46,6 +46,7 @@
 
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._root=this.shadowRoot.getElementById("root");
             this.style.height = "100%";  //Beta Workaround
             const aabb = this.getBoundingClientRect();
             this._width = aabb.width;
@@ -64,7 +65,6 @@
 
         redraw() {
      var myChart = echarts.init(this._root,"wight");
-var option;
 
 const option = {
   xAxis: {
