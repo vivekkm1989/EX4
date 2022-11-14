@@ -58,7 +58,7 @@ var getScriptPromisify=(src)=>{
 
  // do something with the passed text
 }
-await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
+
             //Adding event handler for click events
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -68,7 +68,8 @@ await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echart
         };
 
 
-        redraw() {
+       async redraw() {
+    await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0/echarts.min.js");
      var myChart = echarts.init(this._root,"wight");
 
 const option = {
