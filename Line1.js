@@ -5,15 +5,8 @@ var getScriptPromisify=(src)=>{
 };
 
 (function () {
-    let d3Script = document.createElement('script');
-    let d3Script1 = document.createElement('script');
-    document.head.appendChild(d3Script);
-    document.head.appendChild(d3Script1);
-    var sgname;
-    var flag=0; //check if arr already having the value
-    var checkload=0;
-    var arr = new Array();
-    let tmpl = document.createElement('template');
+   
+    const tmpl = document.createElement('template');
     tmpl.innerHTML = `
     <style>
  </style>
@@ -23,15 +16,6 @@ var getScriptPromisify=(src)=>{
 
     class WMM extends HTMLElement {
 
-
-        disconnectedCallback() {
-            // your cleanup code goes here
-            try {
-                document.head.removeChild(d3Script);
-                document.head.removeChild(d3Script1);
-            }
-            catch{ }
-        }
 
         constructor() {
             super();
@@ -44,19 +28,13 @@ var getScriptPromisify=(src)=>{
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this.shadowRoot.getElementById("root");
-            this.style.height = "100%";  //Beta Workaround
-            const aabb = this.getBoundingClientRect();
-            this._width = aabb.width;
-            this._height = aabb.height;
-                  
+			this._props={};
             this.redraw();
 
-
- // do something with the passed text
 }
 
 
-        };
+       
 
 console.log("outside redraw");
        async redraw() {
