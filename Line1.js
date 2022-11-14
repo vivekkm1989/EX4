@@ -25,9 +25,13 @@ var getScriptPromisify=(src)=>{
                 window._d3 = d3;
             }
 
-            this._shadowRoot = this.attachShadow({ mode: 'open' });
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            let shadowRoot = this.attachShadow({ mode: 'open' });
+            shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this.shadowRoot.getElementById("root");
+			this.addEventListener("click", event => {
+ var event = new Event("onClick");
+ this.dispatchEvent(event);
+ });
 			this._props={};
 			console.log("before redraw");
             this.redraw();
