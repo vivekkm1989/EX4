@@ -29,13 +29,17 @@ var getScriptPromisify=(src)=>{
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this.shadowRoot.getElementById("root");
 			this._props={};
+			console.log("before redraw");
             this.redraw();
 
+}
+onCustomWidgetResize(width,height){
+this.redraw();
 }
 
        async redraw() {
     await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
-     const myChart = echarts.init(this._root,"wight");
+     var myChart = echarts.init(this._root,"wight");
 console.log("after myChart");
 const option = {
   xAxis: {
@@ -59,6 +63,9 @@ option && myChart.setOption(option);
 
     }
 
+    d3Script.onload = () => {
+
         customElements.define('com-infy-wm-sol', WMM);
+    };
 
 })();
