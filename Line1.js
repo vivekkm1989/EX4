@@ -14,14 +14,9 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
     <style>
- :host {
- border-radius: 25px;
- border-width: 4px;
- border-color: black;
- border-style: solid;
- display: block;
- }
  </style>
+ <div id="root" style="width:100%; height:100%;">
+ </div>
  `;
 
     class WMM extends HTMLElement {
