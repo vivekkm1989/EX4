@@ -24,7 +24,7 @@
  </style>
  `;
 
-    class WM extends HTMLElement {
+    class WMM extends HTMLElement {
 
 
         disconnectedCallback() {
@@ -50,8 +50,7 @@
             const aabb = this.getBoundingClientRect();
             this._width = aabb.width;
             this._height = aabb.height;
-            this._svgContainer;
-           
+                  
             this.redraw();
            
             //Adding event handler for click events
@@ -91,7 +90,7 @@ option && myChart.setOption(option);
 
     d3Script.onload = () => {
 
-        customElements.define('com-infy-wm-sol', WM);
+        customElements.define('com-infy-wm-sol', WMM);
     };
 
 })();
