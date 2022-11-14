@@ -58,9 +58,9 @@ option && myChart.setOption(option);
 
     }
 
-    tmpl.onload = () => {
+
 
         customElements.define('com-infy-wm-sol', WMM);
-    };
+  
 
 })();
