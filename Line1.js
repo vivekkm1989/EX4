@@ -32,26 +32,58 @@ onCustomWidgetResize(width,height){
 this.redraw();
 }
 
+set myDataSource(dataBinding){
+	this._myDataSource=dataBinding;
+	this.redraw();
+}
+
        async redraw() {
     await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
+	
+	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
+	const measure=this._myDataSource.metadata.feeds.measures.values[0];
+	const data=this._myDataSource.data.map((data)=>{
+		return{
+		name:data[dimension].label,
+		value:data[measure].raw,
+	};
+	});
      const myChart = echarts.init(this._root,"wight");
-console.log("after myChart");
+console.log(data);
+
 const option = {
+  title: {
+    text: 'Stacked Line'
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+ 
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+
   xAxis: {
     type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    boundaryGap: false,
+    data: data.name()
   },
   yAxis: {
     type: 'value'
   },
   series: [
+    
     {
-      data: [150, 230, 224, 218, 135, 147, 260],
-      type: 'line'
+      name: 'Search Engine',
+      type: 'line',
+      stack: 'Total',
+      data: data.value()
     }
   ]
 };
-console.log("before option");
 option && myChart.setOption(option);
 
         };
