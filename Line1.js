@@ -45,7 +45,7 @@ set myDataSource(dataBinding){
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
-var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label  + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
+var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
 const option = {
   title: {
     text: title
