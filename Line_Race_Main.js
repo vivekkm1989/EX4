@@ -139,7 +139,7 @@ set myDataSource(dataBinding){
     },
     series: seriesList
   };
-  myChart.setOption(option);
+ // myChart.setOption(option);
 
 
 option && myChart.setOption(option);
