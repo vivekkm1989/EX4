@@ -74,7 +74,7 @@ set myDataSource(dataBinding){
         config: {
           and: [
             { dimension: 'Date', gte: 2000 },
-            { dimension: this._myDataSource.metadata.dimensions.dimensions1_0.description, '=': country }
+            { dimension: 'Product', '=': country }
           ]
         }
       }
