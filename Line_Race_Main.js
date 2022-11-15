@@ -52,6 +52,7 @@ set myDataSource(dataBinding){
 	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0);
 	       var dim1_desc=this._myDataSource.metadata.dimensions.dimensions1_0.description;
 	       var dim2_desc=this._myDataSource.metadata.dimensions.dimensions2_0.description;
+	       var measure_desc=this._myDataSource.metadata.mainStructureMembers.measures_0.label;
 	       
 	const dimension="dimensions1_0";
 	const date="dimensions2_0";
@@ -103,10 +104,10 @@ set myDataSource(dataBinding){
       },
       encode: {
         x: dim2_desc,
-        y: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-        label: [dim1_desc, this._myDataSource.metadata.mainStructureMembers.measures_0.label],
+        y: measure_desc,
+        label: [dim1_desc, measure_desc],
         itemName: dim2_desc,
-        tooltip: this._myDataSource.metadata.mainStructureMembers.measures_0.label
+        tooltip: measure_desc
       }
     });
   });
@@ -131,7 +132,7 @@ set myDataSource(dataBinding){
       nameLocation: 'middle'
     },
     yAxis: {
-      name: this._myDataSource.metadata.mainStructureMembers.measures_0.label
+      name: measure_desc
     },
     grid: {
       right: 140
