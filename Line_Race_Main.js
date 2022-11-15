@@ -111,7 +111,7 @@ set myDataSource(dataBinding){
       }
     });
   });
-  option = {
+  const option = {
     animationDuration: 10000,
     dataset: [
       {
