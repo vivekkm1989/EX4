@@ -48,8 +48,8 @@ set myDataSource(dataBinding){
 		return;
 	}
 	console.log(this._myDataSource);
-	const dimension=this._myDataSource.metadata.feeds.dimensions1.values[0];
-	const date=this._myDataSource.metadata.feeds.dimensions2.values[0];
+	const dimension="dimensions1_0";
+	const date="dimensions2_0";
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
 	const data=this._myDataSource.data.map((data)=>{
 		return{
@@ -73,7 +73,7 @@ set myDataSource(dataBinding){
         type: 'filter',
         config: {
           and: [
-            { dimension: this._myDataSource.metadata.dimensions.dimensions2_0.description, gte: 2000 },
+            { dimension: 'Date', gte: 2000 },
             { dimension: this._myDataSource.metadata.dimensions.dimensions1_0.description, '=': country }
           ]
         }
