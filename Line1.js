@@ -14,19 +14,14 @@ var getScriptPromisify=(src)=>{
  </div>
  `;
 
-    class WMM extends HTMLElement {
-
-
+    class LINE extends HTMLElement {
         constructor() {
             super();
-
             this._shadowRoot = this.attachShadow({ mode: "open" });
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this._shadowRoot.getElementById("root");
-			this._props={};
-			console.log("before redraw");
-            this.redraw();
-
+	    this._props={};
+	    this.redraw();
 }
 onCustomWidgetResize(width,height){
 this.redraw();
@@ -36,10 +31,9 @@ set myDataSource(dataBinding){
 	this._myDataSource=dataBinding;
 	this.redraw();
 }
-
        async redraw() {
-    await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
-	if(!this._myDataSource|| this._myDataSource=="success"){
+   	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
+	if(!this._myDataSource|| this._myDataSource!=="success"){
 		return;
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
@@ -51,9 +45,7 @@ set myDataSource(dataBinding){
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
-console.log(this._myDataSource.metadata.dimensions.dimensions_0.description[0]);
-console.log(this._myDataSource.metadata.mainStructureMembers.measures_0.label[0]);
-	       var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label  + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
+var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label  + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
 const option = {
   title: {
     text: title
@@ -80,7 +72,7 @@ const option = {
   series: [
     
     {
-      name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
+      name: '',
       type: 'line',
       stack: 'Total',
       data: data.map(item => item.value)
@@ -92,8 +84,6 @@ option && myChart.setOption(option);
         };
 
     }
-
-        customElements.define('com-infy-wm-sol', WMM);
-  
+        customElements.define('com-cg-line-sol', LINE);  
 
 })();
