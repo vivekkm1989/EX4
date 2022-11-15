@@ -5,7 +5,7 @@ var getScriptPromisify=(src)=>{
 };
 
 (function () {
-   
+    var counter=0;
     const tmpl = document.createElement("template");
     tmpl.innerHTML = `
     <style>
@@ -22,14 +22,23 @@ var getScriptPromisify=(src)=>{
             this._root=this._shadowRoot.getElementById("root");
 	    this._props={};
 	    this.redraw();
+		counter=1;
 }
 onCustomWidgetResize(width,height){
-this.redraw();
+	if(counter!==1)
+	{
+		this.redraw();
+	}
+	
+
 }
 
 set myDataSource(dataBinding){
 	this._myDataSource=dataBinding;
-	this.redraw();
+	if(counter!==1)
+	{
+		this.redraw();
+	}
 }
        async redraw() {
    	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
@@ -80,7 +89,7 @@ const option = {
   ]
 };
 option && myChart.setOption(option);
-
+counter=2;
         };
 
     }
