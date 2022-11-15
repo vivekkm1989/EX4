@@ -50,8 +50,8 @@ set myDataSource(dataBinding){
 	       console.log(this._myDataSource.metadata);
 	console.log(this._myDataSource.metadata.dimensions);
 	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0);
-	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0.description);
-	       console.log(this._myDataSource.metadata.dimensions.dimensions2_0.description);
+	       var dim1_desc=this._myDataSource.metadata.dimensions.dimensions1_0.description;
+	       var dim2_desc=this._myDataSource.metadata.dimensions.dimensions2_0.description;
 	const dimension="dimensions1_0";
 	const date="dimensions2_0";
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
@@ -101,10 +101,10 @@ set myDataSource(dataBinding){
         focus: 'series'
       },
       encode: {
-        x: this._myDataSource.metadata.dimensions.dimensions2_0.description,
+        x: dim2_desc,
         y: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-        label: [this._myDataSource.metadata.dimensions.dimensions1_0.description, this._myDataSource.metadata.mainStructureMembers.measures_0.label],
-        itemName: this._myDataSource.metadata.dimensions.dimensions2_0.description,
+        label: [dim1_desc, this._myDataSource.metadata.mainStructureMembers.measures_0.label],
+        itemName: dim2_desc,
         tooltip: this._myDataSource.metadata.mainStructureMembers.measures_0.label
       }
     });
