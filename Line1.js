@@ -33,8 +33,7 @@ set myDataSource(dataBinding){
 }
        async redraw() {
    	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
-	if(!this._myDataSource|| this._myDataSource!=="success"){
-		console.log("inside return");
+	if(!this._myDataSource|| this._myDataSource.state!=="success"){
 		return;
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
