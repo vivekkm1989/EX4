@@ -53,13 +53,13 @@ set myDataSource(dataBinding){
      const myChart = echarts.init(this._root,"wight");
 console.log(this._myDataSource.metadata.dimensions.dimensions_0.description[0]);
 console.log(this._myDataSource.metadata.mainStructureMembers.measures_0.label[0]);
-	       var title=this._myDataSource.metadata.dimensions.dimensions_0.description[0] + " vs "+ this._myDataSource.metadata.mainStructureMembers.measures_0.label[0];
+	       var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label  + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
 const option = {
   title: {
     text: title
   },
   tooltip: {
-    trigger: 'axis'
+    trigger: "item"
   },
  
   grid: {
@@ -80,7 +80,7 @@ const option = {
   series: [
     
     {
-      name: '',
+      name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
       type: 'line',
       stack: 'Total',
       data: data.map(item => item.value)
