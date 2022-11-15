@@ -52,6 +52,7 @@ set myDataSource(dataBinding){
 	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0);
 	       var dim1_desc=this._myDataSource.metadata.dimensions.dimensions1_0.description;
 	       var dim2_desc=this._myDataSource.metadata.dimensions.dimensions2_0.description;
+	       
 	const dimension="dimensions1_0";
 	const date="dimensions2_0";
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
