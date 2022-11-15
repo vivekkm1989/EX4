@@ -48,8 +48,8 @@ set myDataSource(dataBinding){
 		return;
 	}
 	console.log(this._myDataSource.metadata.dimensions);
-	       console.log(this._myDataSource.metadata.dimensions.dimensions1);
-	       console.log(this._myDataSource.metadata.dimensions.dimensions1.values);
+	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0);
+	       console.log(this._myDataSource.metadata.dimensions.dimensions1_0.values);
 	const dimension="dimensions1_0";
 	const date="dimensions2_0";
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
