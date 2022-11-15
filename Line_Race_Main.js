@@ -116,7 +116,7 @@ set myDataSource(dataBinding){
     dataset: [
       {
         id: 'dataset_raw',
-        source: this._myDataSource.data
+        source: data
       },
       ...datasetWithFilters
     ],
