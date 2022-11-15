@@ -1,0 +1,52 @@
+{
+	"name": "Line",
+	"description": "Line Chart",
+	"eula": "",
+	"vendor": "Vivek",
+	"license": "",
+	"id": "com.cg.sample.line.solution",
+	"newInstancePrefix": "Line_Chart",
+	"version": "1.0.0",
+	"icon": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-cg-line-sol",
+            "url": "https://vivekkm1989.github.io/Rect/Line1.js",
+			
+            "integrity": "",
+            "ignoreIntegrity" : true
+		}
+	
+    ],
+	"properties": {
+		
+	},
+	
+	"methods": {
+		
+		
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks on chart"
+		}
+
+	},
+		   "dataBindings": {
+      "myDataSource": {
+        "feeds": [
+          {
+            "id": "dimensions",
+            "description": "Dimensions",
+            "type": "dimension"
+          },
+          {
+            "id": "measures",
+            "description": "Measures",
+            "type": "mainStructureMember"
+          }
+        ]
+      }
+    }
+}
