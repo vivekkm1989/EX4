@@ -14,7 +14,7 @@ var getScriptPromisify=(src)=>{
  </div>
  `;
 
-    class LINE extends HTMLElement {
+    class LINECHART extends HTMLElement {
         constructor() {
             super();
             this._shadowRoot = this.attachShadow({ mode: "open" });
@@ -84,6 +84,6 @@ option && myChart.setOption(option);
         };
 
     }
-        customElements.define('com-cg-line-sol', LINE);  
+        customElements.define('com-cg-line-sol', LINECHART);  
 
 })();
