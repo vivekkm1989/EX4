@@ -47,9 +47,9 @@ set myDataSource(dataBinding){
 		counter=0;
 		return;
 	}
-	       console.log(this._myDataSource);
-	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
-	const date=this._myDataSource.metadata.feeds.dimensions.values[1];
+	console.log(this._myDataSource);
+	const dimension=this._myDataSource.metadata.feeds.dimensions1.values[0];
+	const date=this._myDataSource.metadata.feeds.dimensions2.values[0];
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
 	const data=this._myDataSource.data.map((data)=>{
 		return{
@@ -73,8 +73,8 @@ set myDataSource(dataBinding){
         type: 'filter',
         config: {
           and: [
-            { dimension: this._myDataSource.metadata.dimensions.dimensions_1.description, gte: 2000 },
-            { dimension: this._myDataSource.metadata.dimensions.dimensions_0.description, '=': country }
+            { dimension: this._myDataSource.metadata.dimensions.dimensions2_0.description, gte: 2000 },
+            { dimension: this._myDataSource.metadata.dimensions.dimensions1_0.description, '=': country }
           ]
         }
       }
@@ -97,10 +97,10 @@ set myDataSource(dataBinding){
         focus: 'series'
       },
       encode: {
-        x: this._myDataSource.metadata.dimensions.dimensions_1.description,
+        x: this._myDataSource.metadata.dimensions.dimensions2_0.description,
         y: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-        label: [this._myDataSource.metadata.dimensions.dimensions_0.description, this._myDataSource.metadata.mainStructureMembers.measures_0.label],
-        itemName: this._myDataSource.metadata.dimensions.dimensions_1.description,
+        label: [this._myDataSource.metadata.dimensions.dimensions1_0.description, this._myDataSource.metadata.mainStructureMembers.measures_0.label],
+        itemName: this._myDataSource.metadata.dimensions.dimensions2_0.description,
         tooltip: this._myDataSource.metadata.mainStructureMembers.measures_0.label
       }
     });
