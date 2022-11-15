@@ -21,8 +21,9 @@ var getScriptPromisify=(src)=>{
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this._shadowRoot.getElementById("root");
 	    this._props={};
+	    counter=1;
 	    this.redraw();
-		counter=1;
+		
 }
 onCustomWidgetResize(width,height){
 	if(counter!==1)
@@ -43,6 +44,7 @@ set myDataSource(dataBinding){
        async redraw() {
    	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
 	if(!this._myDataSource|| this._myDataSource.state!=="success"){
+		counter=0;
 		return;
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
