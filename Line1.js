@@ -82,7 +82,7 @@ const option = {
     type: 'value',
 	name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
         nameLocation: 'middle',
-        nameGap: 100
+        nameGap: 50
   },
   series: [
     
