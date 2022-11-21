@@ -76,9 +76,7 @@ const option = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: data.map(item => item.name),
-	name: this._myDataSource.metadata.dimensions.dimensions_0.description,
-        nameGap: 50
+    data: data.map(item => item.name)
   },
   yAxis: {
     type: 'value',
