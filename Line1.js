@@ -76,13 +76,15 @@ const option = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: data.map(item => item.name)
+    data: data.map(item => item.name),
+	name: this._myDataSource.metadata.dimensions.dimensions_0.description,
+        nameGap: 50
   },
   yAxis: {
     type: 'value',
 	name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
         nameLocation: 'middle',
-        nameGap: 50
+        nameGap: 100
   },
   series: [
     
