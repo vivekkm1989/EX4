@@ -64,12 +64,6 @@ const option = {
         display: true,
         labelString: this._myDataSource.metadata.mainStructureMembers.measures_0.label
       }
-    }],
-		  xAxes: [{
-      scaleLabel: {
-        display: true,
-        labelString: this._myDataSource.metadata.dimensions.dimensions_0.description
-      }
     }]
   }     ,
   title: {
