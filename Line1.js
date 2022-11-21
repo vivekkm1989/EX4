@@ -75,6 +75,9 @@ const option = {
 
   xAxis: {
     type: 'category',
+	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
+        nameLocation: 'middle',
+        nameGap: 40,
     boundaryGap: false,
     data: data.map(item => item.name)
   },
