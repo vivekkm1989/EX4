@@ -92,12 +92,6 @@ set myDataSource(dataBinding){
       datasetId: datasetId,
       showSymbol: false,
       name: country,
-      endLabel: {
-        show: true,
-        formatter: function (params) {
-          return params.value[3] + ': ' + params.value[0];
-        }
-      },
       labelLayout: {
         moveOverlap: 'shiftY'
       },
