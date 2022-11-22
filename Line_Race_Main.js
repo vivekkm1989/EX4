@@ -85,6 +85,7 @@ set myDataSource(dataBinding){
         }
       }
     });
+	  console.log(datasetWithFilters);
     seriesList.push({
       type: 'line',
       datasetId: datasetId,
