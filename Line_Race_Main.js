@@ -68,6 +68,7 @@ set myDataSource(dataBinding){
 	 
 	 
 	  const countries = data.map(item => item.name);
+	  console.log(countries);
   const datasetWithFilters = [];
   const seriesList = [];
   echarts.util.each(countries, function (country) {
@@ -144,54 +145,6 @@ set myDataSource(dataBinding){
 
 
 option && myChart.setOption(option);
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-/*var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
-const option = {
-  title: {
-    text: title
-  },
-  tooltip: {
-    trigger: "Axis"
-  },
- 
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true
-  },
-
-  xAxis: {
-    type: 'category',
-    boundaryGap: false,
-    data: data.map(item => item.name)
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: [
-    
-    {
-      name: '',
-      type: 'line',
-      stack: 'Total',
-      data: data.map(item => item.value)
-    }
-  ]
-};
-option && myChart.setOption(option);
-counter=2;*/
-
-
-
         };
 
     }
