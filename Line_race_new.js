@@ -67,6 +67,7 @@ function run(_rawData) {
   ];
   const datasetWithFilters = [];
   const seriesList = [];
+await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
   echarts.util.each(countries, function (country) {
     var datasetId = 'dataset_' + country;
     datasetWithFilters.push({
