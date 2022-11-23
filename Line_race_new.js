@@ -67,7 +67,6 @@ function run(_rawData) {
   ];
   const datasetWithFilters = [];
   const seriesList = [];
-var echarts = require('echarts');
   echarts.util.each(countries, function (country) {
     var datasetId = 'dataset_' + country;
     datasetWithFilters.push({
