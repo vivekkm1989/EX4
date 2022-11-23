@@ -45,7 +45,7 @@ set myDataSource(dataBinding){
 async render() {
 	
 	$.get(
-  await getScriptPromisify("https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json");
+  await getScriptPromisify("https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json"),
   function (_rawData) {
     run(_rawData);
   }
