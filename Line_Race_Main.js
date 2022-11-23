@@ -5,7 +5,7 @@ var getScriptPromisify=(src)=>{
 };
 
 (function () {
-    var counter=0;
+   
     const tmpl = document.createElement("template");
     tmpl.innerHTML = `
     <style>
@@ -21,30 +21,25 @@ var getScriptPromisify=(src)=>{
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._root=this._shadowRoot.getElementById("root");
 	    this._props={};
-	    counter=1;
+	    
 	    this.render();
 		
 }
 onCustomWidgetResize(width,height){
-	if(counter!==1)
-	{
-		this.render();
-	}
 	
+		this.render();
 
 }
 
 set myDataSource(dataBinding){
 	this._myDataSource=dataBinding;
-	if(counter!==1)
-	{
+	
 		this.render();
-	}
 }
        async render() {
    	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
 	if(!this._myDataSource|| this._myDataSource.state!=="success"){
-		counter=0;
+		
 		return;
 	}
 	       console.log(this._myDataSource.metadata);
