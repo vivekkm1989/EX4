@@ -52,6 +52,7 @@ set myDataSource(dataBinding){
 }
 async render() {
 await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
+	  const myChart = echarts.init(this._root,"wight");
 function run(_rawData) {
   // var countries = ['Australia', 'Canada', 'China', 'Cuba', 'Finland', 'France', 'Germany', 'Iceland', 'India', 'Japan', 'North Korea', 'South Korea', 'New Zealand', 'Norway', 'Poland', 'Russia', 'Turkey', 'United Kingdom', 'United States'];
   const countries = [
