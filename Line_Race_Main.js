@@ -14,7 +14,7 @@ var getScriptPromisify=(src)=>{
  </div>
  `;
 
-    class LINERACE extends HTMLElement {
+    class LINERACE1 extends HTMLElement {
         constructor() {
             super();
             this._shadowRoot = this.attachShadow({ mode: "open" });
@@ -137,6 +137,6 @@ option && myChart.setOption(option);
         };
 
     }
-        customElements.define('com-cg-line-race', LINERACE);  
+        customElements.define('com-cg-line-race', LINERACE1);  
 
 })();
