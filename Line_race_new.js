@@ -5,9 +5,6 @@ var getScriptPromisify=(src)=>{
 };
 
 var ROOT_PATH = 'https://echarts.apache.org/examples';
-
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
 var option;
 
 $.get(
