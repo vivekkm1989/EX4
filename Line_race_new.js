@@ -1,3 +1,4 @@
+import * as echarts from 'echarts';
 var getScriptPromisify=(src)=>{
     return new Promise((resolve)=>{
         $.getScript(src,resolve);
