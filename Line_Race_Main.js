@@ -137,6 +137,6 @@ option && myChart.setOption(option);
         };
 
     }
-        customElements.define('com-cg-line-race', LINERACE1);  
+        customElements.define('com-cg-race-line', LINERACE1);  
 
 })();
