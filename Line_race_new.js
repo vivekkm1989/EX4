@@ -44,11 +44,11 @@ set myDataSource(dataBinding){
 }
 async render() {
 	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
+	const myChart = echarts.init(this._root,"wight");
 	$.get(
   await getScriptPromisify("https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json"),
 
-  function (_rawData) {
-const myChart = echarts.init(this._root,"wight");	
+  function (_rawData) {	
     run(_rawData);
   }
 );
