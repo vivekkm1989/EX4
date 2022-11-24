@@ -46,13 +46,15 @@ async render() {
 	
 	$.get(
   await getScriptPromisify("https://echarts.apache.org/examples/data/asset/data/life-expectancy-table.json"),
+		const myChart = echarts.init(this._root,"wight");
+	await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
   function (_rawData) {
     run(_rawData);
   }
 );
-await getScriptPromisify("https://cdn.bootcdn.net/ajax/libs/echarts/5.4.0/echarts.min.js");
+
 		
-	  const myChart = echarts.init(this._root,"wight");
+	  
 function run(_rawData) {
   // var countries = ['Australia', 'Canada', 'China', 'Cuba', 'Finland', 'France', 'Germany', 'Iceland', 'India', 'Japan', 'North Korea', 'South Korea', 'New Zealand', 'Norway', 'Poland', 'Russia', 'Turkey', 'United Kingdom', 'United States'];
   const countries = [
@@ -67,7 +69,7 @@ function run(_rawData) {
   ];
   const datasetWithFilters = [];
   const seriesList = [];
-  myChart.util.each(countries, function (country) {
+  echarts.util.each(countries, function (country) {
     var datasetId = 'dataset_' + country;
     datasetWithFilters.push({
       id: datasetId,
