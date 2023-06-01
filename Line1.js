@@ -48,13 +48,15 @@ set myDataSource(dataBinding){
 		return;
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
-	const measure=this._myDataSource.metadata.feeds.measures.values[0];
-	 const measure1=this._myDataSource.metadata.feeds.measures.values[1];
+	const measure1=this._myDataSource.metadata.feeds.measures.values[0];
+	 const measure2=this._myDataSource.metadata.feeds.measures.values[1];
+	 const measure3=this._myDataSource.metadata.feeds.measures.values[2];
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
-		value:data[measure].raw,
 		m1:data[measure].raw,
+		m2:data[measure].raw,
+		m3:data[measure].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
@@ -94,25 +96,32 @@ const option = {
     
     {
       name: '',
-      type: 'line',
+     
       stack: 'Total',
 	smooth: 'true',
 	    areaStyle: {
 	    color: '#E5E4E2',
         opacity: 0.5
 	    },
-      data: data.map(item => item.value)
+      data: data.map(item => item.m1)
     },
 	  {
       name: '',
       type: 'line',
       stack: 'Total',
 	smooth: 'true',
-      data: data.map(item => item.m1)
+      data: data.map(item => item.m2)
+    },
+	   {
+      name: '',
+      type: 'line',
+      stack: 'Total',
+	smooth: 'true',
+      data: data.map(item => item.m3)
     }
   ]
 };
-	       console.log("new added1");
+	       console.log("new added2");
 option && myChart.setOption(option);
 counter=2;
         };
