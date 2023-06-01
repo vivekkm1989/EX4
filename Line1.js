@@ -49,8 +49,8 @@ set myDataSource(dataBinding){
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
 	const measure1=this._myDataSource.metadata.feeds.measures.values[0];
-	 const measure2=this._myDataSource.metadata.feeds.measures1.values[0];
-	 const measure3=this._myDataSource.metadata.feeds.measures2.values[0];
+	 const measure2=this._myDataSource.metadata.feeds.measures.values[1];
+	 const measure3=this._myDataSource.metadata.feeds.measures.values[2];
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
