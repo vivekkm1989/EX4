@@ -61,7 +61,7 @@ set myDataSource(dataBinding){
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
-var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label + " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
+var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label+", "+this._myDataSource.metadata.mainStructureMembers.measures_1.label +", "+this._myDataSource.metadata.mainStructureMembers.measures_2.label+ " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
 const option = {
 	
   title: {
@@ -81,6 +81,7 @@ const option = {
     // Try 'horizontal'
     orient: 'horizontal',
     top: 'center'
+	 data:[this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label]
   },
   xAxis: {
     type: 'category',
@@ -88,15 +89,10 @@ const option = {
         
     data: data.map(item => item.name),
     nameLocation: 'middle',
-    nameGap: 40,
+    nameGap: 50,
     boundaryGap: false
   },
-  yAxis: {
-    type: 'value',
-	name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-        nameLocation: 'middle',
-        nameGap: 50
-  },
+
   series: [
     
     {
