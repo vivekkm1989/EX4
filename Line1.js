@@ -50,13 +50,14 @@ set myDataSource(dataBinding){
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
 	const measure1=this._myDataSource.metadata.feeds.measures.values[0];
 	 const measure2=this._myDataSource.metadata.feeds.measures.values[1];
+	 const measure2=this._myDataSource.metadata.feeds.measures.values[2];
 	
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
 		m1:data[measure1].raw,
 		m2:data[measure2].raw,
-	
+		m3:data[measure3].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
