@@ -78,10 +78,7 @@ const option = {
     containLabel: true
   },
  legend: {
-    // Try 'horizontal'
-    orient: 'horizontal',
-    top: 'center',
-	data:[this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label]
+    data,
 	
   },
   xAxis: {
