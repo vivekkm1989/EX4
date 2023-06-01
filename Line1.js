@@ -77,10 +77,7 @@ const option = {
     bottom: '3%',
     containLabel: true
   },
- legend: {
-    data,
-	
-  },
+ legend: {},
   xAxis: {
     type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
