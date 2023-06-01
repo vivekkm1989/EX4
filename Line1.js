@@ -94,6 +94,7 @@ const option = {
       name: '',
       type: 'line',
       stack: 'Total',
+	smooth: 'true',
       data: data.map(item => item.value)
     }
   ]
