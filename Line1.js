@@ -54,9 +54,9 @@ set myDataSource(dataBinding){
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
-		m1:data[measure].raw,
-		m2:data[measure].raw,
-		m3:data[measure].raw,
+		m1:data[measure1].raw,
+		m2:data[measure2].raw,
+		m3:data[measure3].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
