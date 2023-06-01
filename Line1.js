@@ -49,10 +49,12 @@ set myDataSource(dataBinding){
 	}
 	const dimension=this._myDataSource.metadata.feeds.dimensions.values[0];
 	const measure=this._myDataSource.metadata.feeds.measures.values[0];
+	 const measure1=this._myDataSource.metadata.feeds.measures.values[1];
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
 		value:data[measure].raw,
+		m1:data[measure1].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
@@ -100,6 +102,13 @@ const option = {
         opacity: 0.5
 	    },
       data: data.map(item => item.value)
+    }
+	  {
+      name: '',
+      type: 'line',
+      stack: 'Total',
+	smooth: 'true',
+      data: data.map(item => item.m1)
     }
   ]
 };
