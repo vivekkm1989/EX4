@@ -100,7 +100,7 @@ const option = {
     }
   ]
 };
-	       console.log("new added");
+	       console.log("new added1");
 option && myChart.setOption(option);
 counter=2;
         };
