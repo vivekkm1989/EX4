@@ -99,7 +99,7 @@ yAxis: {
   series: [
     
     {
-      name: '',
+      name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
      type: 'line',
 	smooth: 'true',
 	    areaStyle: {
@@ -109,20 +109,20 @@ yAxis: {
       data: data.map(item => item.m1)
     },
 	  {
-      name: '',
+      name: this._myDataSource.metadata.mainStructureMembers.measures_1.label,
       type: 'line',
 	smooth: 'true',
       data: data.map(item => item.m2)
     },
 	   {
-      name: '',
+      name: this._myDataSource.metadata.mainStructureMembers.measures_2.label,
       type: 'line',
 	smooth: 'true',
       data: data.map(item => item.m3)
     }
   ]
 };
-	       console.log("new added2");
+
 option && myChart.setOption(option);
 counter=2;
         };
