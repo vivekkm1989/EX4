@@ -106,6 +106,11 @@ yAxis: {
 	    color: '#E5E4E2',
         opacity: 0.5
 	    },
+	      emphasis: {
+     	areaStyle: {
+       		color:'#E5E4E2'
+     		}
+   	},
       data: data.map(item => item.m1)
     },
 	  {
