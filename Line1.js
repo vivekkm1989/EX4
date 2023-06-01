@@ -95,12 +95,15 @@ const option = {
       type: 'line',
       stack: 'Total',
 	smooth: 'true',
-	    areaStyle: {},
+	    areaStyle: {
+	    color: '#E5E4E2',
+        opacity: 0.5
+	    },
       data: data.map(item => item.value)
     }
   ]
 };
-	       console.log("new added1");
+	       console.log("new added2");
 option && myChart.setOption(option);
 counter=2;
         };
