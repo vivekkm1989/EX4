@@ -141,7 +141,6 @@ function run(_rawData) {
   myChart.setOption(option);
 }
 
-option && myChart.setOption(option);
 };
 }
 
