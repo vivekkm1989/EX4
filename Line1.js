@@ -99,6 +99,7 @@ const option = {
     }
   ]
 };
+	       console.log("new added");
 option && myChart.setOption(option);
 counter=2;
         };
