@@ -81,12 +81,7 @@ const option = {
     // Try 'horizontal'
     orient: 'horizontal',
     top: 'center',
-	 yAxis: {
-    type: 'value',
-	name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-        nameLocation: 'middle',
-        nameGap: 50
-  },
+	data:[this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label,this._myDataSource.metadata.mainStructureMembers.measures_0.label]
 	
   },
   xAxis: {
