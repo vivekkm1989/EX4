@@ -80,7 +80,6 @@ const option = {
  legend: {
     // Try 'horizontal'
     orient: 'horizontal',
-    right: 10,
     top: 'center'
   },
   xAxis: {
@@ -103,7 +102,6 @@ const option = {
     {
       name: '',
      type: 'line',
-      stack: 'Total',
 	smooth: 'true',
 	    areaStyle: {
 	    color: '#E5E4E2',
@@ -114,14 +112,12 @@ const option = {
 	  {
       name: '',
       type: 'line',
-      stack: 'Total',
 	smooth: 'true',
       data: data.map(item => item.m2)
     },
 	   {
       name: '',
       type: 'line',
-      stack: 'Total',
 	smooth: 'true',
       data: data.map(item => item.m3)
     }
