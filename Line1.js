@@ -68,7 +68,7 @@ const option = {
     text: title
   },
   tooltip: {
-    trigger: 'item'
+    trigger: 'axis'
   },
  
   grid: {
