@@ -79,8 +79,7 @@ const option = {
   },
  legend: {
   orient: 'vertical',
-    right: 10,
-    top: 'center'
+    right: 10
  },
   xAxis: {
     type: 'category',
