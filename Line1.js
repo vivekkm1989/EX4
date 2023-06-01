@@ -80,7 +80,13 @@ const option = {
  legend: {
     // Try 'horizontal'
     orient: 'horizontal',
-    top: 'center'
+    top: 'center',
+	 yAxis: {
+    type: 'value',
+	name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
+        nameLocation: 'middle',
+        nameGap: 50
+  },
 	
   },
   xAxis: {
@@ -92,7 +98,12 @@ const option = {
     nameGap: 50,
     boundaryGap: false
   },
-
+yAxis: {
+    type: 'value',
+	name:'',
+        nameLocation: 'middle',
+        nameGap: 50
+  },
   series: [
     
     {
