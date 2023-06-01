@@ -102,7 +102,7 @@ const option = {
         opacity: 0.5
 	    },
       data: data.map(item => item.value)
-    }
+    },
 	  {
       name: '',
       type: 'line',
