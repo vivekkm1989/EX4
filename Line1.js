@@ -77,7 +77,12 @@ const option = {
     bottom: '3%',
     containLabel: true
   },
-
+ legend: {
+    // Try 'horizontal'
+    orient: 'horizontal',
+    right: 10,
+    top: 'center'
+  },
   xAxis: {
     type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
