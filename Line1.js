@@ -95,6 +95,7 @@ const option = {
       type: 'line',
       stack: 'Total',
 	smooth: 'true',
+	    areaStyle: {},
       data: data.map(item => item.value)
     }
   ]
