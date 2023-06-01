@@ -54,7 +54,7 @@ set myDataSource(dataBinding){
 		return{
 		name:data[dimension].label,
 		value:data[measure].raw,
-		m1:data[measure1].raw
+		m1:data[measure].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
@@ -112,7 +112,7 @@ const option = {
     }
   ]
 };
-	       console.log("new added2");
+	       console.log("new added1");
 option && myChart.setOption(option);
 counter=2;
         };
