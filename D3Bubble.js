@@ -168,7 +168,7 @@
 
     d3Script.onload = () => {
 
-        customElements.define('com-infy-wm-sol', WM);
+        customElements.define('com-cg-bb-sol', WM);
     };
 
 })();
