@@ -64,6 +64,7 @@ set myDataSource(dataBinding){
 	});
      const myChart = echarts.init(this._root,"wight");
 var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label+", "+this._myDataSource.metadata.mainStructureMembers.measures_1.label +", "+this._myDataSource.metadata.mainStructureMembers.measures_2.label+ " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
+const colors=['#5470c6', '#91cc75', '#fac858', '#E5E4E2'];
 const option = {
 	
   title: {
@@ -83,6 +84,7 @@ const option = {
   orient: 'vertical',
     right: 10
  },
+color:colors,
   xAxis: {
     type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
