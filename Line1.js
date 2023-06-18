@@ -122,6 +122,11 @@ yAxis: {
 		   name: this._myDataSource.metadata.mainStructureMembers.measuresarea_0.label,
      type: 'line',
 	smooth: 'true',
+	symbol: 'none',
+	lineStyle:{
+		width:0,
+		color:'#E5E4E2',
+	},
 	    areaStyle: {
 	    color: '#E5E4E2',
         opacity: 0.5
