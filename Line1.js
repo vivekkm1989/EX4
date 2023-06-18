@@ -51,6 +51,7 @@ set myDataSource(dataBinding){
 	const measure1=this._myDataSource.metadata.feeds.measures.values[0];
 	 const measure2=this._myDataSource.metadata.feeds.measures.values[1];
 	 const measure3=this._myDataSource.metadata.feeds.measures.values[2];
+	const measurearea=this._myDataSource.metadata.feeds.measuresarea.values[0];
 	
 	const data=this._myDataSource.data.map((data)=>{
 		return{
@@ -58,6 +59,7 @@ set myDataSource(dataBinding){
 		m1:data[measure1].raw,
 		m2:data[measure2].raw,
 		m3:data[measure3].raw,
+		marea:data[measurearea].raw,
 	};
 	});
      const myChart = echarts.init(this._root,"wight");
@@ -100,17 +102,8 @@ yAxis: {
     
     {
       name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
-     type: 'line',
+      type: 'line',
 	smooth: 'true',
-	    areaStyle: {
-	    color: '#E5E4E2',
-        opacity: 0.5
-	    },
-	      emphasis: {
-     	areaStyle: {
-       		color:'#E5E4E2'
-     		}
-   	},
       data: data.map(item => item.m1)
     },
 	  {
@@ -124,7 +117,23 @@ yAxis: {
       type: 'line',
 	smooth: 'true',
       data: data.map(item => item.m3)
-    }
+    },
+	  {
+		   name: this._myDataSource.metadata.mainStructureMembers.measuresarea_0.label,
+     type: 'line',
+	smooth: 'true',
+	    areaStyle: {
+	    color: '#E5E4E2',
+        opacity: 0.5
+	    },
+	      emphasis: {
+     	areaStyle: {
+       		color:'#E5E4E2'
+     		}
+   	},
+      data: data.map(item => item.marea)
+	  }
+	  
   ]
 };
 
