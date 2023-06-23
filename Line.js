@@ -109,15 +109,21 @@ yAxis: {
 	     label: {
         show: true
       },
+	labelLayout: {
+          hideOverlap: true
+        },
       data: data.map(item => item.m1)
     },
 	  {
       name: this._myDataSource.metadata.mainStructureMembers.measures_1.label,
       type: 'line',
 	smooth: 'true',
-		       label: {
+	 label: {
         show: true
       },
+	labelLayout: {
+          hideOverlap: true
+        },
       data: data.map(item => item.m2)
     },
 	   {
@@ -127,9 +133,12 @@ yAxis: {
 		    lineStyle: {
                type: 'dashed'
     },
-		        label: {
+	 label: {
         show: true
       },
+	labelLayout: {
+          hideOverlap: true
+        },
       data: data.map(item => item.m3)
     },
 	 //Area measure
@@ -152,9 +161,12 @@ yAxis: {
        		color:'#E5E4E2'
      		}
    	},
-		       label: {
+	label: {
         show: true
       },
+	labelLayout: {
+          hideOverlap: true
+        },
       data: data.map(item => item.marea)
 	  }
 	  
