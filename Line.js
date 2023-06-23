@@ -83,7 +83,7 @@ const option = {
  legend: {
   orient: 'vertical',
     right: 10,
-	top:10
+	top:15
  },
 color:colors,
   xAxis: {
