@@ -95,10 +95,9 @@ color:colors,
     boundaryGap: false
   },
 yAxis: {
-    type: '',
-	name:'',
-        nameLocation: 'middle',
-        nameGap: 50
+   axisLabel:{
+  show:false
+},
   },
   series: [
     
@@ -106,6 +105,9 @@ yAxis: {
       name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
       type: 'line',
 	smooth: 'true',
+	     label: {
+        show: true
+      },
       data: data.map(item => item.m1)
     },
 	  {
