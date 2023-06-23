@@ -95,7 +95,7 @@ color:colors,
     boundaryGap: false
   },
 yAxis: {
-    type: '',
+    type: 'value',
 	name:'',
         nameLocation: 'middle',
         nameGap: 50
@@ -118,9 +118,6 @@ yAxis: {
       name: this._myDataSource.metadata.mainStructureMembers.measures_2.label,
       type: 'line',
 	smooth: 'true',
-		lineStyle: {
-             type: 'dashed'
-    }
       data: data.map(item => item.m3)
     },
 	  {
