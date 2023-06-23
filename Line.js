@@ -95,7 +95,7 @@ color:colors,
     boundaryGap: false
   },
 yAxis: {
-    type: '',
+    type: 'value',
 	name:'',
         nameLocation: 'middle',
         nameGap: 50
