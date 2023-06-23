@@ -100,7 +100,7 @@ yAxis: {
 },
   },
   series: [
-    
+    // Curve measures
     {
       name: this._myDataSource.metadata.mainStructureMembers.measures_0.label,
       type: 'line',
@@ -131,8 +131,9 @@ yAxis: {
       },
       data: data.map(item => item.m3)
     },
+	 //Area measure
 	  {
-		   name: this._myDataSource.metadata.mainStructureMembers.measuresarea_0.label,
+	name: this._myDataSource.metadata.mainStructureMembers.measuresarea_0.label,
      type: 'line',
 	smooth: 'true',
 	symbol: 'none',
@@ -142,7 +143,8 @@ yAxis: {
 	},
 	    areaStyle: {
 	    color: '#E5E4E2',
-        opacity: 0.5
+        opacity: 0.5,
+	origin:'start',
 	    },
 	      emphasis: {
      	areaStyle: {
