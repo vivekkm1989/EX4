@@ -114,6 +114,9 @@ yAxis: {
       name: this._myDataSource.metadata.mainStructureMembers.measures_1.label,
       type: 'line',
 	smooth: 'true',
+		       label: {
+        show: true
+      },
       data: data.map(item => item.m2)
     },
 	   {
@@ -123,6 +126,9 @@ yAxis: {
 		    lineStyle: {
                type: 'dashed'
     },
+		        label: {
+        show: true
+      },
       data: data.map(item => item.m3)
     },
 	  {
@@ -143,6 +149,9 @@ yAxis: {
        		color:'#E5E4E2'
      		}
    	},
+		       label: {
+        show: true
+      },
       data: data.map(item => item.marea)
 	  }
 	  
