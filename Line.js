@@ -95,7 +95,7 @@ color:colors,
     boundaryGap: false
   },
 yAxis: {
-    type: 'value',
+    type: '',
 	name:'',
         nameLocation: 'middle',
         nameGap: 50
@@ -120,7 +120,7 @@ yAxis: {
 	smooth: 'true',
 		    lineStyle: {
                type: 'dashed'
-    }
+    },
       data: data.map(item => item.m3)
     },
 	  {
