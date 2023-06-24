@@ -90,7 +90,7 @@ color:colors,
     type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
         
-    data: data.map(item => item.name),
+    data: data.map(item => item.name.sort(function(a, b){return a - b})),
     nameLocation: 'middle',
     nameGap: 50,
     boundaryGap: false
