@@ -62,6 +62,7 @@ set myDataSource(dataBinding){
 		marea:data[measurearea].raw,
 	};
 	});
+	       
      const myChart = echarts.init(this._root,"wight");
 var title=this._myDataSource.metadata.mainStructureMembers.measures_0.label+", "+this._myDataSource.metadata.mainStructureMembers.measures_1.label +", "+this._myDataSource.metadata.mainStructureMembers.measures_2.label+ " per "+ this._myDataSource.metadata.dimensions.dimensions_0.description;
 const colors=['#5470c6', '#91cc75', '#fac858', '#E5E4E2'];
@@ -90,7 +91,7 @@ color:colors,
     type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
         
-    data: data.map(item => item.name),
+    data: data.map(item => item.name).sort(function(a, b){return a - b}),
     nameLocation: 'middle',
     nameGap: 50,
     boundaryGap: false
