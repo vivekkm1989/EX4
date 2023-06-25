@@ -52,7 +52,7 @@ set myDataSource(dataBinding){
 	 const measure2=this._myDataSource.metadata.feeds.measures.values[1];
 	 const measure3=this._myDataSource.metadata.feeds.measures.values[2];
 	const measurearea=this._myDataSource.metadata.feeds.measuresarea.values[0];
-	console.log(dimension);
+	console.log(data);
 	const data=this._myDataSource.data.map((data)=>{
 		return{
 		name:data[dimension].label,
