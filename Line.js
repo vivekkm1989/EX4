@@ -93,7 +93,11 @@ color:colors,
     data: data.map(item => item.name).sort(function(a, b){return a - b}),
     nameLocation: 'middle',
     nameGap: 50,
-    boundaryGap: false
+    boundaryGap: false,
+	   axisLabel: {
+        interval: 0,
+        rotate: 30 //If the label names are too long you can manage this by rotating the label.
+      }
   },
 yAxis: {
   type: 'value',
