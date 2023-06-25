@@ -96,7 +96,7 @@ color:colors,
     boundaryGap: false,
 	  axisLabel: {
         rotate: 45,
-        formatter: { date: '{dd} - {mm}-{yyyy}' },
+        formatter: { date: '{dd} - {MM}-{yyyy}' },
       },
   },
 yAxis: {
