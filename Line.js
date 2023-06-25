@@ -88,7 +88,7 @@ const option = {
  },
 color:colors,
   xAxis: {
-    type: 'time',
+    type: 'category',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
      axisLabel:
      { formatter:'{yyyy}-{MM}-{dd}'
