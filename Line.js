@@ -90,7 +90,9 @@ color:colors,
   xAxis: {
     type: 'time',
 	 name: this._myDataSource.metadata.dimensions.dimensions_0.description,
-        
+     axisLabel:
+     { formatter:'{yyyy}-{MM}-{dd}'
+     },
     data: data.map(item => item.name).sort(function(a, b){return a - b}),
     nameLocation: 'middle',
     nameGap: 50,
