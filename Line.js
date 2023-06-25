@@ -97,9 +97,10 @@ color:colors,
     boundaryGap: false
   },
 yAxis: {
-   axisLabel:{
-  show:true
-},
+  type: 'value',
+	name:'',
+        nameLocation: 'middle',
+        nameGap: 50
   },
   series: [
     // Curve measures
